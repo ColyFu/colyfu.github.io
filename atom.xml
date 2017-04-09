@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-09T12:11:43.000Z</updated>
+  <updated>2017-04-09T12:13:04.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,13 +16,33 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>GWAS如何确定候选区间和causal gene</title>
-    <link href="http://yoursite.com/2017/04/09/GWAS%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E5%80%99%E9%80%89%E5%8C%BA%E9%97%B4%E5%92%8Ccausal-gene/"/>
-    <id>http://yoursite.com/2017/04/09/GWAS如何确定候选区间和causal-gene/</id>
-    <published>2017-04-09T12:11:43.000Z</published>
-    <updated>2017-04-09T12:11:43.000Z</updated>
+    <title></title>
+    <link href="http://yoursite.com/2017/04/06/GWAS%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E5%80%99%E9%80%89%E5%8C%BA%E9%97%B4%E5%92%8Ccausal-gene/"/>
+    <id>http://yoursite.com/2017/04/06/GWAS如何确定候选区间和causal-gene/</id>
+    <published>2017-04-06T09:09:22.000Z</published>
+    <updated>2017-04-09T12:13:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<hr>
+<p>title: GWAS如何确定候选区间和causal gene？<br>date: 2017/4/9 19:46:21<br>tags:  </p>
+<ul>
+<li>GWAS  </li>
+<li>causal gene  </li>
+<li>LD  </li>
+<li>heat map<br>categories:  </li>
+<li>GWAS  </li>
+</ul>
+<hr>
+<p>随着高通量测序成本的急剧下降，越来越多的GWAS研究通过全基因组重测序获得标记。全基因组重测序的高密度标记，使得通过GWAS研究快速找到causal gene甚至causal mutation</p>
+]]></content>
     
     <summary type="html">
+    
+      &lt;hr&gt;
+&lt;p&gt;title: GWAS如何确定候选区间和causal gene？&lt;br&gt;date: 2017/4/9 19:46:21&lt;br&gt;tags:  &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GWAS  &lt;/li&gt;
+&lt;li&gt;causal gene  &lt;/li&gt;
+&lt;li&gt;LD  &lt;/li&gt;
     
     </summary>
     
