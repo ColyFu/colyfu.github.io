@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-09T12:34:57.000Z</updated>
+  <updated>2017-04-09T12:36:32.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2017/04/09/GWAS%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E5%80%99%E9%80%89%E5%8C%BA%E9%97%B4%E5%92%8Ccausal-gene/"/>
     <id>http://yoursite.com/2017/04/09/GWAS如何确定候选区间和causal-gene/</id>
     <published>2017-04-09T12:33:37.000Z</published>
-    <updated>2017-04-09T12:34:57.000Z</updated>
+    <updated>2017-04-09T12:36:32.000Z</updated>
     
     <content type="html"><![CDATA[<p>随着高通量测序成本的急剧下降，越来越多的GWAS研究通过全基因组重测序获得标记。全基因组重测序的高密度标记，使得通过GWAS研究快速找到causal gene甚至causal mutation</p>
 ]]></content>
@@ -32,6 +32,14 @@
     
     </summary>
     
+    
+      <category term="GWAS" scheme="http://yoursite.com/tags/GWAS/"/>
+    
+      <category term="causal gene" scheme="http://yoursite.com/tags/causal-gene/"/>
+    
+      <category term="LD" scheme="http://yoursite.com/tags/LD/"/>
+    
+      <category term="heat map" scheme="http://yoursite.com/tags/heat-map/"/>
     
   </entry>
   
