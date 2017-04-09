@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-09T13:06:40.000Z</updated>
+  <updated>2017-04-09T14:18:05.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,15 +20,21 @@
     <link href="http://yoursite.com/2017/04/09/GWAS%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E5%80%99%E9%80%89%E5%8C%BA%E9%97%B4%E5%92%8Ccausal-gene/"/>
     <id>http://yoursite.com/2017/04/09/GWAS如何确定候选区间和causal-gene/</id>
     <published>2017-04-09T12:33:37.000Z</published>
-    <updated>2017-04-09T13:06:40.000Z</updated>
+    <updated>2017-04-09T14:18:05.000Z</updated>
     
-    <content type="html"><![CDATA[<p>随着高通量测序成本的急剧下降，越来越多的GWAS研究通过全基因组重测序获得标记。全基因组重测序的高密度标记，使得通过GWAS研究快速找到causal gene甚至causal mutation</p>
+    <content type="html"><![CDATA[<p>随着高通量测序成本的急剧下降，越来越多的GWAS研究通过全基因组重测序获得标记。全基因组重测序的高密度标记，使得通过GWAS研究快速找到causal gene甚至causal mutation成为可能。但是通过GWAS得到一个信号后，怎么确定与这个信号关联的基因呢？<br>基本的思路就是找与这个信号强连锁的区域，一般来说r<sup>2</sup>大于0.6的区域视为强连锁的区域。简单粗糙的做法：我们可以通过群体的全基因组LD-decay分析，找到LD decay到r<sup>2</sup>等于0.6时所对应的距离，将GWAS超过阈值的信号前后各延伸这个距离作为候选区间。<br>但是基因组不同区域的连锁程度差异很大，上面一刀切的做法可能使我们漏掉一些基因，或者多调查许多关联性并不强的基因。而且很多作物的连锁性很强，导致候选基因很多，这样就大大增加了工作难度。下面介绍一个非常简单高效的方法（<a href="http://www.nature.com/ng/journal/v48/n8/abs/ng.3596.html" target="_blank" rel="external">参考文献</a>）。<br><img src="http://onzjn6hm6.bkt.clouddn.com/20170409_heatmap.png" alt="heatmap">  </p>
+<ol>
+<li>找到信号后，向前后延伸一段距离（可以根据全基因组的LD-decay水平大概估计），计算这段区域内所有标记pairwise r<sup>2</sup>，将r<sup>2</sup>大于0.6的block作为候选区间。pairwise r<sup>2</sup>可以用<a href="http://zzz.bwh.harvard.edu/plink/" target="_blank" rel="external">PLINK</a>计算：</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">plink --noweb --bfile &lt;bfile_prefix&gt; \  </div><div class="line">      --chr 5 --from-bp 13641890 --to-bp 17641890 \  </div><div class="line">      --matrix --r2 --out &lt;out_prefix&gt;</div></pre></td></tr></table></figure>
+<ol>
+<li></li>
+</ol>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;随着高通量测序成本的急剧下降，越来越多的GWAS研究通过全基因组重测序获得标记。全基因组重测序的高密度标记，使得通过GWAS研究快速找到causal gene甚至causal mutation&lt;/p&gt;
-
+      &lt;p&gt;随着高通量测序成本的急剧下降，越来越多的GWAS研究通过全基因组重测序获得标记。全基因组重测序的高密度标记，使得通过GWAS研究快速找到causal gene甚至causal mutation成为可能。但是通过GWAS得到一个信号后，怎么确定与这个信号关联的基因呢？&lt;br&gt;
     
     </summary>
     
