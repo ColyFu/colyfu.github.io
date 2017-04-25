@@ -71,12 +71,10 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="fastq,phred33,phred64,格式," />
 
 
 
-
-  
 
 
   <link rel="alternate" href="/atom.xml" title="Coly" type="application/atom+xml" />
@@ -91,13 +89,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Coly">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+<meta name="description" content="前几天有朋友从网上下载了一批fastq文件，为Phred64格式，分析之前没发现，比对的时候BWA报错了。很多人可能没有接触过老Illumina数据，不知道怎么判断编码格式，也不知道怎么转为Phred33格式，所以简单说明一下怎么判断fastq文件的质量编码方式以及怎么将Phred64编码格式转为Phred33编码格式。  Phred64/33质量编码格式区别fastq文件中，碱基质量是用ASCI">
+<meta name="keywords" content="fastq,phred33,phred64,格式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="判断fastq文件质量编码格式及Phred64转Phred33方法">
+<meta property="og:url" content="http://yoursite.com/2017/04/25/fastq-phred-trans/index.html">
 <meta property="og:site_name" content="Coly">
-<meta property="og:updated_time" content="2017-04-09T12:58:41.000Z">
+<meta property="og:description" content="前几天有朋友从网上下载了一批fastq文件，为Phred64格式，分析之前没发现，比对的时候BWA报错了。很多人可能没有接触过老Illumina数据，不知道怎么判断编码格式，也不知道怎么转为Phred33格式，所以简单说明一下怎么判断fastq文件的质量编码方式以及怎么将Phred64编码格式转为Phred33编码格式。  Phred64/33质量编码格式区别fastq文件中，碱基质量是用ASCI">
+<meta property="og:updated_time" content="2017-04-25T13:43:23.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Coly">
+<meta name="twitter:title" content="判断fastq文件质量编码格式及Phred64转Phred33方法">
+<meta name="twitter:description" content="前几天有朋友从网上下载了一批fastq文件，为Phred64格式，分析之前没发现，比对的时候BWA报错了。很多人可能没有接触过老Illumina数据，不知道怎么判断编码格式，也不知道怎么转为Phred33格式，所以简单说明一下怎么判断fastq文件的质量编码方式以及怎么将Phred64编码格式转为Phred33编码格式。  Phred64/33质量编码格式区别fastq文件中，碱基质量是用ASCI">
 
 
 
@@ -125,19 +127,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/categories/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/04/25/fastq-phred-trans/"/>
 
 
 
 
 
-  <title>
-  
-
-  
-    分类 | Coly
-  
-</title>
+  <title> 判断fastq文件质量编码格式及Phred64转Phred33方法 | Coly </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -172,7 +168,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -311,25 +307,226 @@
             
 
   <div id="posts" class="posts-expand">
-  <header class="post-header">
+    
 
-	<h1 class="post-title" itemprop="name headline"></h1>
+  
 
+  
+  
+  
 
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/25/fastq-phred-trans/">
 
-</header>
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Coly Fu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://onzjn6hm6.bkt.clouddn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Coly">
+    </span>
 
     
-    
-      <div class="category-all-page">
-        <div class="category-all-title">
-            目前共计 2 个分类
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                判断fastq文件质量编码格式及Phred64转Phred33方法
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-25T21:37:56+08:00">
+                2017-04-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/QC/" itemprop="url" rel="index">
+                    <span itemprop="name">QC</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/04/25/fastq-phred-trans/" class="leancloud_visitors" data-flag-title="判断fastq文件质量编码格式及Phred64转Phred33方法">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
         </div>
-        <div class="category-all">
-          <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/GWAS/">GWAS</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/QC/">QC</a><span class="category-list-count">1</span></li></ul>
-        </div>
-      </div>
+      </header>
     
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>前几天有朋友从网上下载了一批fastq文件，为Phred64格式，分析之前没发现，比对的时候BWA报错了。很多人可能没有接触过老Illumina数据，不知道怎么判断编码格式，也不知道怎么转为Phred33格式，所以简单说明一下怎么判断fastq文件的质量编码方式以及怎么将Phred64编码格式转为Phred33编码格式。</p>
+<ul>
+<li><h3 id="Phred64-33质量编码格式区别"><a href="#Phred64-33质量编码格式区别" class="headerlink" title="Phred64/33质量编码格式区别"></a>Phred64/33质量编码格式区别</h3><p>fastq文件中，碱基质量是用ASCII字符表示。Phred64编码格式，碱基质量值为字符的十进制ASCII码减去64。同理，Phred33编码格式，碱基质量值为字符的十进制ASCII码减去33。一般碱基的质量值范围为[0, 41]，X ten之后，质量值只有(2,7,11,22,27,32,37,42)几个梯度。因此，GATK的BQSR过程对于X ten的数据可能更加重要。<br>Phred质量值Q和出错的概率P的关系为Q = -10*lg(P)，如碱基质量值为30，表示出错的概率为0.001，碱基质量值为20，表示出错的概率为0.01。<br>目前主流软件如BWA, GATK等都识别的是Phred33质量编码格式，如果为Phred64格式，则可能会报错，即使不报错，后续的分析也会有问题。因此，下载的数据如果不清楚编码格式，需要先判断，如果为Phred64，则需要转为Phred33格式。</p>
+</li>
+<li><h3 id="判断fastq文件质量值编码格式"><a href="#判断fastq文件质量值编码格式" class="headerlink" title="判断fastq文件质量值编码格式"></a>判断fastq文件质量值编码格式</h3><p>格式判断既可以通过肉眼快速判断，也可以使用下面的脚本进行判断。如果文件少，没有编程基础，可以用快速判断的方法。利用程序判断更加准确、快速，因此有编程基础的人，应该尽量使用程序判断。</p>
+</li>
+</ul>
+<blockquote>
+<p>肉眼快速判断：质量字符有数字的为Phred33，有大写字母的为Phred64。<br>通过程序：基本思路为将一定数量的reads质量值字符转为ASCII码，然后判断质量值的范围。<a href="[点我下载脚本](http://onzjn6hm6.bkt.clouddn.com/CheckFqQualityCode.pl)">[点我下载脚本](http://onzjn6hm6.bkt.clouddn.com/CheckFqQualityCode.pl)</a><br>脚本的使用方法如下，第一个参数为fastq文件，自动判断是否为压缩文件，第二个参数为用于判断的reads数，默认为1000。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; perl CheckFqQualityCode.pl prefix.fq[.gz] [1000]</div><div class="line">&gt;</div></pre></td></tr></table></figure></p>
+</blockquote>
+<ul>
+<li><h3 id="Phred64格式转Phred33格式"><a href="#Phred64格式转Phred33格式" class="headerlink" title="Phred64格式转Phred33格式"></a>Phred64格式转Phred33格式</h3>Phred64格式转Phred33格式的原理很简单，只需在原有ASCII码的基础上减去64再加上33既可。大家可以自己写，也可以使用lh写的<a href="https://github.com/lh3/seqtk" target="_blank" rel="external">seqtk</a>工具，使用命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">seqtk seq -VQ64 prefix.phred64.fq.gz | gzip &gt; prefix.phred33.fq.gz</div></pre></td></tr></table></figure></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://onzjn6hm6.bkt.clouddn.com/weixin.jpg" alt="Coly Fu WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://onzjn6hm6.bkt.clouddn.com/alipay.jpg" alt="Coly Fu Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/fastq/" rel="tag"># fastq</a>
+          
+            <a href="/tags/phred33/" rel="tag"># phred33</a>
+          
+            <a href="/tags/phred64/" rel="tag"># phred64</a>
+          
+            <a href="/tags/格式/" rel="tag"># 格式</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/04/09/GWAS如何确定候选区间和causal-gene/" rel="prev" title="GWAS如何确定候选区间和causal gene">
+                GWAS如何确定候选区间和causal gene <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -338,6 +535,12 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODA3OC80NjUx"></div>
+    
+  </div>
+
 
         </div>
         
@@ -357,8 +560,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="http://onzjn6hm6.bkt.clouddn.com/avatar.jpg"
@@ -427,6 +639,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Phred64-33质量编码格式区别"><span class="nav-number">1.</span> <span class="nav-text">Phred64/33质量编码格式区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#判断fastq文件质量值编码格式"><span class="nav-number">2.</span> <span class="nav-text">判断fastq文件质量值编码格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Phred64格式转Phred33格式"><span class="nav-number">3.</span> <span class="nav-text">Phred64格式转Phred33格式</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -534,6 +762,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
