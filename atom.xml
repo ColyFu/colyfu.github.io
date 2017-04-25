@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-04-25T13:43:23.000Z</updated>
+  <updated>2017-04-25T13:47:01.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://yoursite.com/2017/04/25/fastq-phred-trans/"/>
     <id>http://yoursite.com/2017/04/25/fastq-phred-trans/</id>
     <published>2017-04-25T13:37:56.000Z</published>
-    <updated>2017-04-25T13:43:23.000Z</updated>
+    <updated>2017-04-25T13:47:01.000Z</updated>
     
     <content type="html"><![CDATA[<p>前几天有朋友从网上下载了一批fastq文件，为Phred64格式，分析之前没发现，比对的时候BWA报错了。很多人可能没有接触过老Illumina数据，不知道怎么判断编码格式，也不知道怎么转为Phred33格式，所以简单说明一下怎么判断fastq文件的质量编码方式以及怎么将Phred64编码格式转为Phred33编码格式。</p>
+<a id="more"></a>
 <ul>
 <li><h3 id="Phred64-33质量编码格式区别"><a href="#Phred64-33质量编码格式区别" class="headerlink" title="Phred64/33质量编码格式区别"></a>Phred64/33质量编码格式区别</h3><p>fastq文件中，碱基质量是用ASCII字符表示。Phred64编码格式，碱基质量值为字符的十进制ASCII码减去64。同理，Phred33编码格式，碱基质量值为字符的十进制ASCII码减去33。一般碱基的质量值范围为[0, 41]，X ten之后，质量值只有(2,7,11,22,27,32,37,42)几个梯度。因此，GATK的BQSR过程对于X ten的数据可能更加重要。<br>Phred质量值Q和出错的概率P的关系为Q = -10*lg(P)，如碱基质量值为30，表示出错的概率为0.001，碱基质量值为20，表示出错的概率为0.01。<br>目前主流软件如BWA, GATK等都识别的是Phred33质量编码格式，如果为Phred64格式，则可能会报错，即使不报错，后续的分析也会有问题。因此，下载的数据如果不清楚编码格式，需要先判断，如果为Phred64，则需要转为Phred33格式。</p>
 </li>
@@ -39,7 +40,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;前几天有朋友从网上下载了一批fastq文件，为Phred64格式，分析之前没发现，比对的时候BWA报错了。很多人可能没有接触过老Illumina数据，不知道怎么判断编码格式，也不知道怎么转为Phred33格式，所以简单说明一下怎么判断fastq文件的质量编码方式以及怎么将P
+      &lt;p&gt;前几天有朋友从网上下载了一批fastq文件，为Phred64格式，分析之前没发现，比对的时候BWA报错了。很多人可能没有接触过老Illumina数据，不知道怎么判断编码格式，也不知道怎么转为Phred33格式，所以简单说明一下怎么判断fastq文件的质量编码方式以及怎么将Phred64编码格式转为Phred33编码格式。&lt;/p&gt;
     
     </summary>
     
@@ -61,9 +62,11 @@
     <link href="http://yoursite.com/2017/04/09/GWAS%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E5%80%99%E9%80%89%E5%8C%BA%E9%97%B4%E5%92%8Ccausal-gene/"/>
     <id>http://yoursite.com/2017/04/09/GWAS如何确定候选区间和causal-gene/</id>
     <published>2017-04-09T12:33:37.000Z</published>
-    <updated>2017-04-12T06:54:14.000Z</updated>
+    <updated>2017-04-25T13:47:14.000Z</updated>
     
-    <content type="html"><![CDATA[<p>随着高通量测序成本的急剧下降，越来越多的GWAS研究通过全基因组重测序获得标记。全基因组重测序的高密度标记，使得通过GWAS研究快速找到causal gene甚至causal mutation成为可能。但是通过GWAS得到一个信号后，怎么确定与这个信号关联的基因呢？<br>基本的思路就是找与这个信号强连锁的区域，一般来说r<sup>2</sup>大于0.6的区域视为强连锁的区域。简单粗糙的做法：我们可以通过群体的全基因组LD-decay分析，找到LD decay到r<sup>2</sup>等于0.6时所对应的距离，将GWAS超过阈值的信号前后各延伸这个距离作为候选区间。<br>但是基因组不同区域的连锁程度差异很大，上面一刀切的做法可能使我们漏掉一些基因，或者多调查许多关联性并不强的基因。而且很多作物的连锁性很强，导致候选基因很多，这样就大大增加了工作难度。下面介绍一个非常简单高效的方法（<a href="http://www.nature.com/ng/journal/v48/n8/abs/ng.3596.html" target="_blank" rel="external">参考文献</a>）。  </p>
+    <content type="html"><![CDATA[<p>随着高通量测序成本的急剧下降，越来越多的GWAS研究通过全基因组重测序获得标记。全基因组重测序的高密度标记，使得通过GWAS研究快速找到causal gene甚至causal mutation成为可能。但是通过GWAS得到一个信号后，怎么确定与这个信号关联的基因呢？  </p>
+<a id="more"></a>
+<p>基本的思路就是找与这个信号强连锁的区域，一般来说r<sup>2</sup>大于0.6的区域视为强连锁的区域。简单粗糙的做法：我们可以通过群体的全基因组LD-decay分析，找到LD decay到r<sup>2</sup>等于0.6时所对应的距离，将GWAS超过阈值的信号前后各延伸这个距离作为候选区间。<br>但是基因组不同区域的连锁程度差异很大，上面一刀切的做法可能使我们漏掉一些基因，或者多调查许多关联性并不强的基因。而且很多作物的连锁性很强，导致候选基因很多，这样就大大增加了工作难度。下面介绍一个非常简单高效的方法（<a href="http://www.nature.com/ng/journal/v48/n8/abs/ng.3596.html" target="_blank" rel="external">参考文献</a>）。  </p>
 <p align="center"><br>  <img src="http://onzjn6hm6.bkt.clouddn.com/20170409_heatmap.png" width="300"><br></p>
 
 <ol>
@@ -83,7 +86,7 @@
     
     <summary type="html">
     
-      &lt;p&gt;随着高通量测序成本的急剧下降，越来越多的GWAS研究通过全基因组重测序获得标记。全基因组重测序的高密度标记，使得通过GWAS研究快速找到causal gene甚至causal mutation成为可能。但是通过GWAS得到一个信号后，怎么确定与这个信号关联的基因呢？&lt;br&gt;
+      &lt;p&gt;随着高通量测序成本的急剧下降，越来越多的GWAS研究通过全基因组重测序获得标记。全基因组重测序的高密度标记，使得通过GWAS研究快速找到causal gene甚至causal mutation成为可能。但是通过GWAS得到一个信号后，怎么确定与这个信号关联的基因呢？  &lt;/p&gt;
     
     </summary>
     
