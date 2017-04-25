@@ -96,7 +96,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/25/fastq-phred-trans/index.html">
 <meta property="og:site_name" content="Coly">
 <meta property="og:description" content="前几天有朋友从网上下载了一批fastq文件，为Phred64格式，分析之前没发现，比对的时候BWA报错了。很多人可能没有接触过老Illumina数据，不知道怎么判断编码格式，也不知道怎么转为Phred33格式，所以简单说明一下怎么判断fastq文件的质量编码方式以及怎么将Phred64编码格式转为Phred33编码格式。">
-<meta property="og:updated_time" content="2017-04-25T13:47:01.000Z">
+<meta property="og:updated_time" content="2017-04-25T13:53:05.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="判断fastq文件质量编码格式及Phred64转Phred33方法">
 <meta name="twitter:description" content="前几天有朋友从网上下载了一批fastq文件，为Phred64格式，分析之前没发现，比对的时候BWA报错了。很多人可能没有接触过老Illumina数据，不知道怎么判断编码格式，也不知道怎么转为Phred33格式，所以简单说明一下怎么判断fastq文件的质量编码方式以及怎么将Phred64编码格式转为Phred33编码格式。">
@@ -430,7 +430,7 @@
 </li>
 </ul>
 <blockquote>
-<p>肉眼快速判断：质量字符有数字的为Phred33，有大写字母的为Phred64。<br>通过程序：基本思路为将一定数量的reads质量值字符转为ASCII码，然后判断质量值的范围。<a href="[点我下载脚本](http://onzjn6hm6.bkt.clouddn.com/CheckFqQualityCode.pl)">[点我下载脚本](http://onzjn6hm6.bkt.clouddn.com/CheckFqQualityCode.pl)</a><br>脚本的使用方法如下，第一个参数为fastq文件，自动判断是否为压缩文件，第二个参数为用于判断的reads数，默认为1000。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; perl CheckFqQualityCode.pl prefix.fq[.gz] [1000]</div><div class="line">&gt;</div></pre></td></tr></table></figure></p>
+<p><strong>肉眼快速判断</strong>：质量字符有数字的为Phred33，有大写字母的为Phred64。<br><strong>通过程序</strong>：基本思路为将一定数量的reads质量值字符转为ASCII码，然后判断质量值的范围。\<a href="[点我下载脚本](http://onzjn6hm6.bkt.clouddn.com/CheckFqQualityCode.pl)\">[点我下载脚本](http://onzjn6hm6.bkt.clouddn.com/CheckFqQualityCode.pl)\</a><br>脚本的使用方法如下，第一个参数为fastq文件，自动判断是否为压缩文件，第二个参数为用于判断的reads数，默认为1000。<br>  <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">perl CheckFqQualityCode.pl prefix.fq[.gz] [1000]</div></pre></td></tr></table></figure></p>
 </blockquote>
 <ul>
 <li><h3 id="Phred64格式转Phred33格式"><a href="#Phred64格式转Phred33格式" class="headerlink" title="Phred64格式转Phred33格式"></a>Phred64格式转Phred33格式</h3>Phred64格式转Phred33格式的原理很简单，只需在原有ASCII码的基础上减去64再加上33既可。大家可以自己写，也可以使用lh写的<a href="https://github.com/lh3/seqtk" target="_blank" rel="external">seqtk</a>工具，使用命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">seqtk seq -VQ64 prefix.phred64.fq.gz | gzip &gt; prefix.phred33.fq.gz</div></pre></td></tr></table></figure></li>
