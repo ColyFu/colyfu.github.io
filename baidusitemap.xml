@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/04/25/fastq-phred-trans/</loc>
+    <lastmod>2017-04-26T09:11:07.000Z</lastmod>
+    <data>
+        <display>
+        <title>判断fastq文件质量编码格式及Phred64转Phred33方法</title>
+        <pubTime>2017-04-25T13:37:56.000Z</pubTime>
+        
+        <tag>fastq</tag>
+         
+        <tag>phred33</tag>
+         
+        <tag>phred64</tag>
+         
+        <tag>格式</tag>
+         
+         
+           
+             
+              <breadCrumb title="QC" url="http://yoursite.com/categories/QC/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2017/04/09/GWAS%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E5%80%99%E9%80%89%E5%8C%BA%E9%97%B4%E5%92%8Ccausal-gene/</loc>
+    <lastmod>2017-04-25T13:47:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>GWAS如何确定候选区间和causal gene</title>
+        <pubTime>2017-04-09T12:33:37.000Z</pubTime>
+        
+        <tag>GWAS</tag>
+         
+        <tag>causal gene</tag>
+         
+        <tag>LD</tag>
+         
+        <tag>heat map</tag>
+         
+         
+           
+             
+              <breadCrumb title="GWAS" url="http://yoursite.com/categories/GWAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+</urlset>
