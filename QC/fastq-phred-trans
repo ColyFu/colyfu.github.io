@@ -93,7 +93,7 @@
 <meta name="keywords" content="fastq,phred33,phred64,格式">
 <meta property="og:type" content="article">
 <meta property="og:title" content="判断fastq文件质量编码格式及Phred64转Phred33方法">
-<meta property="og:url" content="http://yoursite.com/fastq-phred-trans.html">
+<meta property="og:url" content="http://yoursite.com/QC/fastq-phred-trans">
 <meta property="og:site_name" content="Coly">
 <meta property="og:description" content="前几天有朋友从网上下载了一批fastq文件，为Phred64格式，分析之前没发现，比对的时候BWA报错了。很多人可能没有接触过老Illumina数据，不知道怎么判断编码格式，也不知道怎么转为Phred33格式，所以简单说明一下怎么判断fastq文件的质量编码方式以及怎么将Phred64编码格式转为Phred33编码格式。">
 <meta property="og:updated_time" content="2017-04-26T09:11:07.000Z">
@@ -127,7 +127,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/fastq-phred-trans.html"/>
+  <link rel="canonical" href="http://yoursite.com/QC/fastq-phred-trans"/>
 
 
 
@@ -184,7 +184,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">宁静致远</p>
+        <h1 class="site-subtitle" itemprop="description">宁静致远</h1>
       
   </div>
 
@@ -316,7 +316,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/fastq-phred-trans.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/QC/fastq-phred-trans">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Coly Fu">
@@ -333,14 +333,14 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
             
             
               
                 判断fastq文件质量编码格式及Phred64转Phred33方法
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -392,7 +392,7 @@
 
           
           
-             <span id="/fastq-phred-trans.html" class="leancloud_visitors" data-flag-title="判断fastq文件质量编码格式及Phred64转Phred33方法">
+             <span id="/QC/fastq-phred-trans" class="leancloud_visitors" data-flag-title="判断fastq文件质量编码格式及Phred64转Phred33方法">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -510,7 +510,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/GWAS如何确定候选区间和causal-gene.html" rel="prev" title="GWAS如何确定候选区间和causal gene">
+              <a href="/GWAS/GWAS如何确定候选区间和causal-gene" rel="prev" title="GWAS如何确定候选区间和causal gene">
                 GWAS如何确定候选区间和causal gene <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -579,7 +579,7 @@
           <p class="site-author-name" itemprop="name">Coly Fu</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
-          
+           
         </div>
         <nav class="site-state motion-element">
 
@@ -1061,6 +1061,21 @@
 
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 

@@ -93,7 +93,7 @@
 <meta name="keywords" content="GWAS,causal gene,LD,heat map">
 <meta property="og:type" content="article">
 <meta property="og:title" content="GWAS如何确定候选区间和causal gene">
-<meta property="og:url" content="http://yoursite.com/GWAS如何确定候选区间和causal-gene.html">
+<meta property="og:url" content="http://yoursite.com/GWAS/GWAS如何确定候选区间和causal-gene">
 <meta property="og:site_name" content="Coly">
 <meta property="og:description" content="随着高通量测序成本的急剧下降，越来越多的GWAS研究通过全基因组重测序获得标记。全基因组重测序的高密度标记，使得通过GWAS研究快速找到causal gene甚至causal mutation成为可能。但是通过GWAS得到一个信号后，怎么确定与这个信号关联的基因呢？">
 <meta property="og:image" content="http://onzjn6hm6.bkt.clouddn.com/20170409_heatmap.png">
@@ -129,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/GWAS如何确定候选区间和causal-gene.html"/>
+  <link rel="canonical" href="http://yoursite.com/GWAS/GWAS如何确定候选区间和causal-gene"/>
 
 
 
@@ -186,7 +186,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">宁静致远</p>
+        <h1 class="site-subtitle" itemprop="description">宁静致远</h1>
       
   </div>
 
@@ -318,7 +318,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/GWAS如何确定候选区间和causal-gene.html">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/GWAS/GWAS如何确定候选区间和causal-gene">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Coly Fu">
@@ -335,14 +335,14 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h2 class="post-title" itemprop="name headline">
             
             
               
                 GWAS如何确定候选区间和causal gene
               
             
-          </h1>
+          </h2>
         
 
         <div class="post-meta">
@@ -394,7 +394,7 @@
 
           
           
-             <span id="/GWAS如何确定候选区间和causal-gene.html" class="leancloud_visitors" data-flag-title="GWAS如何确定候选区间和causal gene">
+             <span id="/GWAS/GWAS如何确定候选区间和causal-gene" class="leancloud_visitors" data-flag-title="GWAS如何确定候选区间和causal gene">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -510,7 +510,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/fastq-phred-trans.html" rel="next" title="判断fastq文件质量编码格式及Phred64转Phred33方法">
+              <a href="/QC/fastq-phred-trans" rel="next" title="判断fastq文件质量编码格式及Phred64转Phred33方法">
                 <i class="fa fa-chevron-left"></i> 判断fastq文件质量编码格式及Phred64转Phred33方法
               </a>
             
@@ -576,7 +576,7 @@
           <p class="site-author-name" itemprop="name">Coly Fu</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
-          
+           
         </div>
         <nav class="site-state motion-element">
 
@@ -1042,6 +1042,21 @@
 
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 
