@@ -4,9 +4,9 @@
   <subtitle>宁静致远</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://colyfu.com/"/>
   <updated>2017-04-26T09:11:07.000Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://colyfu.com/</id>
   
   <author>
     <name>Coly Fu</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>判断fastq文件质量编码格式及Phred64转Phred33方法</title>
-    <link href="http://yoursite.com/QC/fastq-phred-trans.html"/>
-    <id>http://yoursite.com/QC/fastq-phred-trans.html</id>
+    <link href="http://colyfu.com/QC/fastq-phred-trans.html"/>
+    <id>http://colyfu.com/QC/fastq-phred-trans.html</id>
     <published>2017-04-25T13:37:56.000Z</published>
     <updated>2017-04-26T09:11:07.000Z</updated>
     
@@ -44,23 +44,23 @@
     
     </summary>
     
-      <category term="QC" scheme="http://yoursite.com/categories/QC/"/>
+      <category term="QC" scheme="http://colyfu.com/categories/QC/"/>
     
     
-      <category term="fastq" scheme="http://yoursite.com/tags/fastq/"/>
+      <category term="fastq" scheme="http://colyfu.com/tags/fastq/"/>
     
-      <category term="phred33" scheme="http://yoursite.com/tags/phred33/"/>
+      <category term="phred33" scheme="http://colyfu.com/tags/phred33/"/>
     
-      <category term="phred64" scheme="http://yoursite.com/tags/phred64/"/>
+      <category term="phred64" scheme="http://colyfu.com/tags/phred64/"/>
     
-      <category term="格式" scheme="http://yoursite.com/tags/%E6%A0%BC%E5%BC%8F/"/>
+      <category term="格式" scheme="http://colyfu.com/tags/%E6%A0%BC%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>GWAS如何确定候选区间和causal gene</title>
-    <link href="http://yoursite.com/GWAS/GWAS%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E5%80%99%E9%80%89%E5%8C%BA%E9%97%B4%E5%92%8Ccausal-gene.html"/>
-    <id>http://yoursite.com/GWAS/GWAS如何确定候选区间和causal-gene.html</id>
+    <link href="http://colyfu.com/GWAS/GWAS%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E5%80%99%E9%80%89%E5%8C%BA%E9%97%B4%E5%92%8Ccausal-gene.html"/>
+    <id>http://colyfu.com/GWAS/GWAS如何确定候选区间和causal-gene.html</id>
     <published>2017-04-09T12:33:37.000Z</published>
     <updated>2017-04-25T13:47:14.000Z</updated>
     
@@ -90,16 +90,16 @@
     
     </summary>
     
-      <category term="GWAS" scheme="http://yoursite.com/categories/GWAS/"/>
+      <category term="GWAS" scheme="http://colyfu.com/categories/GWAS/"/>
     
     
-      <category term="GWAS" scheme="http://yoursite.com/tags/GWAS/"/>
+      <category term="GWAS" scheme="http://colyfu.com/tags/GWAS/"/>
     
-      <category term="causal gene" scheme="http://yoursite.com/tags/causal-gene/"/>
+      <category term="causal gene" scheme="http://colyfu.com/tags/causal-gene/"/>
     
-      <category term="LD" scheme="http://yoursite.com/tags/LD/"/>
+      <category term="LD" scheme="http://colyfu.com/tags/LD/"/>
     
-      <category term="heat map" scheme="http://yoursite.com/tags/heat-map/"/>
+      <category term="heat map" scheme="http://colyfu.com/tags/heat-map/"/>
     
   </entry>
   
