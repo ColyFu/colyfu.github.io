@@ -4,9 +4,9 @@
   <subtitle>Knowledge is a good thing, and good things are worth spreading!</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://colyfu.com/"/>
+  <link href="http://www.colyfu.com/"/>
   <updated>2017-05-03T01:37:50.000Z</updated>
-  <id>http://colyfu.com/</id>
+  <id>http://www.colyfu.com/</id>
   
   <author>
     <name>Coly Fu</name>
@@ -17,8 +17,8 @@
   
   <entry>
     <title>文献速递 (2017年4月)</title>
-    <link href="http://colyfu.com/%E6%96%87%E7%8C%AE%E5%AF%BC%E8%AF%BB/paper-express-201704.html"/>
-    <id>http://colyfu.com/文献导读/paper-express-201704.html</id>
+    <link href="http://www.colyfu.com/%E6%96%87%E7%8C%AE%E5%AF%BC%E8%AF%BB/paper-express-201704.html"/>
+    <id>http://www.colyfu.com/文献导读/paper-express-201704.html</id>
     <published>2017-05-02T14:16:47.000Z</published>
     <updated>2017-05-03T01:37:50.000Z</updated>
     
@@ -62,17 +62,17 @@
     
     </summary>
     
-      <category term="文献导读" scheme="http://colyfu.com/categories/%E6%96%87%E7%8C%AE%E5%AF%BC%E8%AF%BB/"/>
+      <category term="文献导读" scheme="http://www.colyfu.com/categories/%E6%96%87%E7%8C%AE%E5%AF%BC%E8%AF%BB/"/>
     
     
-      <category term="文献导读" scheme="http://colyfu.com/tags/%E6%96%87%E7%8C%AE%E5%AF%BC%E8%AF%BB/"/>
+      <category term="文献导读" scheme="http://www.colyfu.com/tags/%E6%96%87%E7%8C%AE%E5%AF%BC%E8%AF%BB/"/>
     
   </entry>
   
   <entry>
     <title>判断fastq文件质量编码格式及Phred64转Phred33方法</title>
-    <link href="http://colyfu.com/QC/fastq-phred-trans.html"/>
-    <id>http://colyfu.com/QC/fastq-phred-trans.html</id>
+    <link href="http://www.colyfu.com/QC/fastq-phred-trans.html"/>
+    <id>http://www.colyfu.com/QC/fastq-phred-trans.html</id>
     <published>2017-04-25T13:37:56.000Z</published>
     <updated>2017-04-26T09:11:07.000Z</updated>
     
@@ -98,23 +98,23 @@
     
     </summary>
     
-      <category term="QC" scheme="http://colyfu.com/categories/QC/"/>
+      <category term="QC" scheme="http://www.colyfu.com/categories/QC/"/>
     
     
-      <category term="fastq" scheme="http://colyfu.com/tags/fastq/"/>
+      <category term="fastq" scheme="http://www.colyfu.com/tags/fastq/"/>
     
-      <category term="phred33" scheme="http://colyfu.com/tags/phred33/"/>
+      <category term="phred33" scheme="http://www.colyfu.com/tags/phred33/"/>
     
-      <category term="phred64" scheme="http://colyfu.com/tags/phred64/"/>
+      <category term="phred64" scheme="http://www.colyfu.com/tags/phred64/"/>
     
-      <category term="格式" scheme="http://colyfu.com/tags/%E6%A0%BC%E5%BC%8F/"/>
+      <category term="格式" scheme="http://www.colyfu.com/tags/%E6%A0%BC%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
     <title>GWAS如何确定候选区间和causal gene</title>
-    <link href="http://colyfu.com/GWAS/GWAS%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E5%80%99%E9%80%89%E5%8C%BA%E9%97%B4%E5%92%8Ccausal-gene.html"/>
-    <id>http://colyfu.com/GWAS/GWAS如何确定候选区间和causal-gene.html</id>
+    <link href="http://www.colyfu.com/GWAS/GWAS%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E5%80%99%E9%80%89%E5%8C%BA%E9%97%B4%E5%92%8Ccausal-gene.html"/>
+    <id>http://www.colyfu.com/GWAS/GWAS如何确定候选区间和causal-gene.html</id>
     <published>2017-04-09T12:33:37.000Z</published>
     <updated>2017-04-25T13:47:14.000Z</updated>
     
@@ -144,16 +144,16 @@
     
     </summary>
     
-      <category term="GWAS" scheme="http://colyfu.com/categories/GWAS/"/>
+      <category term="GWAS" scheme="http://www.colyfu.com/categories/GWAS/"/>
     
     
-      <category term="GWAS" scheme="http://colyfu.com/tags/GWAS/"/>
+      <category term="GWAS" scheme="http://www.colyfu.com/tags/GWAS/"/>
     
-      <category term="causal gene" scheme="http://colyfu.com/tags/causal-gene/"/>
+      <category term="causal gene" scheme="http://www.colyfu.com/tags/causal-gene/"/>
     
-      <category term="LD" scheme="http://colyfu.com/tags/LD/"/>
+      <category term="LD" scheme="http://www.colyfu.com/tags/LD/"/>
     
-      <category term="heat map" scheme="http://colyfu.com/tags/heat-map/"/>
+      <category term="heat map" scheme="http://www.colyfu.com/tags/heat-map/"/>
     
   </entry>
   
