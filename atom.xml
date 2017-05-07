@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.colyfu.com/"/>
-  <updated>2017-05-03T01:37:50.000Z</updated>
+  <updated>2017-05-07T16:44:21.000Z</updated>
   <id>http://www.colyfu.com/</id>
   
   <author>
@@ -14,6 +14,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>单体型网络（Haplotype Network）构建及展示</title>
+    <link href="http://www.colyfu.com/%E7%BE%A4%E4%BD%93%E9%81%97%E4%BC%A0%E5%8F%8A%E8%BF%9B%E5%8C%96/haplotype-network.html"/>
+    <id>http://www.colyfu.com/群体遗传及进化/haplotype-network.html</id>
+    <published>2017-05-07T16:24:35.000Z</published>
+    <updated>2017-05-07T16:44:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>单体型网络（Haplotype Network）是谱系地理研究的重要手段。通过单体型网络，我们可以推断群体的起源、扩散历史。那么怎样理解单体型网络以及怎样构建单体型网络？</p>
+<h3 id="什么是单体型网络？"><a href="#什么是单体型网络？" class="headerlink" title="什么是单体型网络？"></a>什么是单体型网络？</h3><p>单体型（haplotype）在单体型网络中是指一段遗传连锁的核酸序列。不同的单体型，通过序列中的变异来区分（常用SNP）。一般用来进行单体型网络构建的单体型有：1）线粒体基因组；2）Y染色体；3）叶绿体基因组；4）基因组上一段强连锁的区段。  </p>
+<p align="center"><br>  <img src="http://onzjn6hm6.bkt.clouddn.com/haplotype_network.png" width="300"><br></p>
+
+<a id="more"></a>
+<p>上图是一个单体型网络的例子，图中一个圆圈表示一个单体型，两个圆圈之间的连线表示这两个单体型相关（一个是由另一个突变而来），连线上面的短竖线表示从一个单体型到与其相连的单体型需要经历的碱基替换数，一个竖线表示一个替换。彩色的圆圈表示我们实际取样到的单体型，圆圈大小表示这种单体型的个数。灰色圆圈表示推断出来可能存在的中间单体型，没有被取样到。一种颜色一般表示一个群体，如按地理划分，品种划分等。图中例子一个单体型只存在于一个群体中，实际情况一个单体型往往在多个群体中出现。此时，一个单体型圆圈中填充多种颜色，以饼图的形式展示。<br>从上图我们可以猜测一种可能的群体历史：A群体和C群体都起源于B群体，A群体从B群体分化出来后，经历过急剧的群体扩张，导致A群体的单体型演化出多个亚型。当然，为了避免过度解读，推断群体历史需要多种证据结合起来。</p>
+<h3 id="构建单体型网络的工具"><a href="#构建单体型网络的工具" class="headerlink" title="构建单体型网络的工具"></a>构建单体型网络的工具</h3><p>比较经典的软件就是<a href="http://www.fluxus-engineering.com/sharenet.htm" target="_blank" rel="external">Network</a>了，但是该软件只支持Windows系统，用起来也比较复杂。这里推荐<a href="http://popart.otago.ac.nz/downloads.shtml" target="_blank" rel="external">PopART</a>，该软件支持Windows，Mac，Linux系统，而且用起来也非常方便，支持多种常用的Network构建方法，关键是该软件支持地图的形势展示单体型分部。下面简单介绍一下该软件的使用方法。<br>PopART的输入文件格式为NEXUS，一般主要用到两个部分DATA和TRAITS。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">#NEXUS</div><div class="line"></div><div class="line">begin data;</div><div class="line">dimensions ntax=4 nchar=30;</div><div class="line">format datatype=dna missing=N gap=-;</div><div class="line">matrix</div><div class="line">seq1 CCACCGTTGCTAAAAATTCATGACACAAGG</div><div class="line">seq2 CCACAGTTTCTAAAAATTCGTGATACAAGG</div><div class="line">seq3 CCACAGTTGCTACAAATTCATGATACAAGG</div><div class="line">seq4 CCACAGGTGCTAAAAATTCATGAAACAAGG</div><div class="line">;</div><div class="line">end;</div><div class="line"></div><div class="line">BEGIN TRAITS;</div><div class="line">    Dimensions NTRAITS=5;</div><div class="line">    Format labels=yes missing=? separator=Comma;</div><div class="line">    TraitLatitude 53 43.6811 5.4 -25.61 -0;</div><div class="line">    TraitLongitude 16.75 87.3311 26.5 134.355 -76;</div><div class="line">    TraitLabels Europe Asia Africa Australia America;</div><div class="line">    Matrix</div><div class="line">    seq1 10,5,0,6,0</div><div class="line">    seq2 0,0,5,0,0</div><div class="line">    seq3 4,0,10,0,0</div><div class="line">    seq4 0,0,0,4,2</div><div class="line">    ;</div><div class="line">END;</div></pre></td></tr></table></figure>
+<p>DATA部分主要纪录单体型信息，比较好理解。TRAITS部分主要纪录单体型来源的群体。如上所示，例子中取了来自5个大洲的样本，一共4种单体型，TRAITS纪录了每种单体型在不同大洲取样的个数，如<code>seq1</code>在<code>Europe</code>有10个，在<code>Asia</code>有5个等等。关键字TraitLatitude和TraitLongitude纪录5个群体取样地点的经纬度，该信息在单体型网络构建中可以不用，当需要用地图展示单体型地理分布时，需要填该信息。NEXUS文件生成后，打开PopART，通过<code>File -&gt; Open</code>打开NEXUS文件，然后通过菜单栏<code>Network</code>选择单体型网络构建算法，如常用的Median Joining Network。选择Median Joining Network后，会提示填写Epsilon参数，该参数用来控制推断中间单体型的细节程度，该值越大，会展示更多推断的中间单体型，一般选择默认的0就好。填好该参数后，点击<code>OK</code>，就生成了我们需要的单体型网络。然后通过菜单栏<code>Edit</code>下的选项，对图中群体的颜色、字体、图例等进行调整。<br>重点介绍一下PopART的单体型地理分布展示。</p>
+<p></p><p align="center"><br>  <img src="http://onzjn6hm6.bkt.clouddn.com/network_map.png" width="300"><br></p><br>点击<code>View -&gt; Switch to map view</code>就可以得到如上所示的单体型地理分布图。通过单体型的地理分布直观展示，我们就可以对群体的扩散迁徙途径进行推断。<p></p>
+<h3 id="单体型序列的获得"><a href="#单体型序列的获得" class="headerlink" title="单体型序列的获得"></a>单体型序列的获得</h3><p>像线粒体、叶绿体、Y染色体等这些在遗传过程中不发生重组的序列，我们直接把检测到的变异替换到参考序列中，就可以用于单体型网络构建。但是通常研究的二倍体基因组数据，由于存在重组，因此不能简单的拿一段序列就进行单体型网络构建，这样的单体型网络就失去了它本身的意义。如要用基因组上面的序列，可以通过以下步骤：  </p>
+<ol>
+<li>找到基因组上强连锁的区段；</li>
+<li>对这段区域中的SNP进行phase；</li>
+</ol>
+<p>第一步可以用PLINK，命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">plink --noweb --bfile bed_prefix --blocks no-pheno-req</div></pre></td></tr></table></figure></p>
+<p>该命令运行会生成<code>.blocks.det</code>文件，该文件纪录了强连锁区段的起止位置、所包含的SNP。接下来，我们需要对感兴趣的强连锁区域的杂合SNP进行phase，构建单体型，该步可以使用软件BEAGLE。<br>第二步，使用BEAGLE进行phase：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -Xss5m -Xmx4g -jar beagle.jar gt=prefix.vcf out=phased.vcf chrom=[chr]:[start]-[end]</div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;单体型网络（Haplotype Network）是谱系地理研究的重要手段。通过单体型网络，我们可以推断群体的起源、扩散历史。那么怎样理解单体型网络以及怎样构建单体型网络？&lt;/p&gt;
+&lt;h3 id=&quot;什么是单体型网络？&quot;&gt;&lt;a href=&quot;#什么是单体型网络？&quot; class=&quot;headerlink&quot; title=&quot;什么是单体型网络？&quot;&gt;&lt;/a&gt;什么是单体型网络？&lt;/h3&gt;&lt;p&gt;单体型（haplotype）在单体型网络中是指一段遗传连锁的核酸序列。不同的单体型，通过序列中的变异来区分（常用SNP）。一般用来进行单体型网络构建的单体型有：1）线粒体基因组；2）Y染色体；3）叶绿体基因组；4）基因组上一段强连锁的区段。  &lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;br&gt;  &lt;img src=&quot;http://onzjn6hm6.bkt.clouddn.com/haplotype_network.png&quot; width=&quot;300&quot;/&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="群体遗传及进化" scheme="http://www.colyfu.com/categories/%E7%BE%A4%E4%BD%93%E9%81%97%E4%BC%A0%E5%8F%8A%E8%BF%9B%E5%8C%96/"/>
+    
+    
+      <category term="Haplotype Network" scheme="http://www.colyfu.com/tags/Haplotype-Network/"/>
+    
+      <category term="单体型网络" scheme="http://www.colyfu.com/tags/%E5%8D%95%E4%BD%93%E5%9E%8B%E7%BD%91%E7%BB%9C/"/>
+    
+      <category term="PopART" scheme="http://www.colyfu.com/tags/PopART/"/>
+    
+      <category term="谱系地理" scheme="http://www.colyfu.com/tags/%E8%B0%B1%E7%B3%BB%E5%9C%B0%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>文献速递 (2017年4月)</title>
