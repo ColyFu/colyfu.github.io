@@ -4,6 +4,36 @@
 
     
   <url>
+    <loc>http://www.colyfu.com/Population-Genetics/pca-interpret.html</loc>
+    <lastmod>2017-05-15T14:52:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>主成分分析及其解读</title>
+        <pubTime>2017-05-15T14:32:26.000Z</pubTime>
+        
+        <tag>主成分分析</tag>
+         
+        <tag>映射</tag>
+         
+        <tag>群体结构</tag>
+         
+        <tag>迁徙</tag>
+         
+        <tag>基因流</tag>
+         
+        <tag>smartpca</tag>
+         
+         
+           
+             
+              <breadCrumb title="Population_Genetics" url="http://www.colyfu.com/categories/Population-Genetics/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.colyfu.com/programming/split-ref.html</loc>
     <lastmod>2017-05-09T03:34:52.000Z</lastmod>
     <data>

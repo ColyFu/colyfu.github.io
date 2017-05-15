@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.colyfu.com/"/>
-  <updated>2017-05-09T03:34:52.000Z</updated>
+  <updated>2017-05-15T14:52:26.000Z</updated>
   <id>http://www.colyfu.com/</id>
   
   <author>
@@ -14,6 +14,88 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>主成分分析及其解读</title>
+    <link href="http://www.colyfu.com/Population-Genetics/pca-interpret.html"/>
+    <id>http://www.colyfu.com/Population-Genetics/pca-interpret.html</id>
+    <published>2017-05-15T14:32:26.000Z</published>
+    <updated>2017-05-15T14:52:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>主成分分析是群体遗传学中常用的分析手段，一般用来 1)分析群体中存在的群体结构(分层)； 2) 推断群体历史； 3) 关联分析中对群体结构进行校正。目前用于主成分分析的数据主要为高密度的SNP标记，其主要思想是将多个线性相关的变量(SNP)，通过一系列矩阵转换，变成少数几个变异解释度大的线性无关变量(特征向量)。  </p>
+<p align="center"><br>  <img src="http://onzjn6hm6.bkt.clouddn.com/pca.png" width="400"><br></p>
+
+<a id="more"></a>
+<ul>
+<li><h3 id="主成分分析软件"><a href="#主成分分析软件" class="headerlink" title="主成分分析软件"></a>主成分分析软件</h3></li>
+</ul>
+<p>主成分分析的软件非常多，R中的prcomp函数即可进行。但是对于群体遗传学中多样本(几百甚至几千)，高密度SNP标记（几百万）需要太多内存和时间，甚至根本不能完成。这里推荐两个比较好用的软件<a href="https://www.hsph.harvard.edu/alkes-price/software/" target="_blank" rel="external">smartpca</a>(EIGENSOFT软件包中)和<a href="https://github.com/gabraham/flashpca" target="_blank" rel="external">flashpca</a>。下面以smartpca为例简单说明一下主成分分析。  </p>
+<p>主成分分析过程中，基因型数据要转换为[0, 1, 2]离散变量，表示某样本某位点相对参考序列突变allele数，因此只能分析二倍体<strong>双等位</strong>基因数据(smartpca也可以分析SSR数据)。n个样本，m个SNPs，既生成n x m矩阵。smartpca在计算过程中，每列需要标准化，即矩阵中每个数字要减去该列平均数u<sub>j</sub>，同时除以u<sub>j</sub>的一个函数，因此每列的和为0，自由度变为n-1，所以smartpca算出来的特征值和特征向量都是n-1个。  </p>
+<p>smartpca的输入文件支持5种格式，可以用EIGENSOFT软件包中的convertf程序相互转换。其中最通用，最方便我们使用的就是PLINK的ped格式文件。smartpca软件运行命令行：  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">smartpca -p smartpca.par &gt; pca.log</div></pre></td></tr></table></figure>
+<p><code>smartpca.par</code>为参数配置文件，示例如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">genotypename: sample159.ped</div><div class="line">snpname:      sample159.pedsnp</div><div class="line">indivname:    sample159.pedind</div><div class="line">evecoutname:  sample159.pca.vec</div><div class="line">evaloutname:  sample159.pca.val</div><div class="line">numoutlieriter: 0</div><div class="line">poplistname: pops</div><div class="line">numchrom: 22</div></pre></td></tr></table></figure>
+<p>其中<code>sample159.ped</code>为PLINK格式ped文件，<strong>注意</strong>smartpca从该文件第6列读取群体信息，如果用vcftools转为PLINK格式ped文件，该列默认为-9，如果有群体信息，将该列改为相应的群体ID，如果没有，请将该列改为‘1’，如果该列为’0’, ‘9’, ‘-9’则表示过滤掉相应个体。<code>sample159.pedsnp</code>为PLINK格式map文件，<code>sample159.pedind</code>文件为<code>sample159.ped</code>文件的1～6列。<strong>注意</strong>，这3个文件的后缀不能改变，smartpca从文件后缀判断文件格式。*.vec和 *.val为特征向量和特征值的输出文件，<code>numoutlieriter</code>参数表示进行几次异常样本去除。如果只想用一部分群体进行PCA分析，将另外的个体<strong>映射</strong>到该变量空间，可以将进行PCA分析的群体ID放在<code>poplistname</code>参数的文件中，每个群体ID一行，其它个体将影射到这些群体的变量空间。<code>numchrom</code>为最大常染色体编号，<strong>超过该值的其它染色体将忽略</strong>。  </p>
+<p>smartpca程序分析结束后，就可以用特征向量*.vec文件进行画图。该文件特征向量按解释度大小从左到右排列。一般用前3个主成分进行画图展示。</p>
+<ul>
+<li><h3 id="主成分分析判断群体结构"><a href="#主成分分析判断群体结构" class="headerlink" title="主成分分析判断群体结构"></a>主成分分析判断群体结构</h3></li>
+</ul>
+<p>主成分分析的结果可以用来判断是否存在群体结构（分层），如果亚群之间的差异比较大，我们可以看到不同的亚群会形成各自的cluster，如上图。有些群体可能差异比较小，很难通过眼睛判断是否存在群体结构，那么是否有定量的检验方法呢？  </p>
+<p>smartpca提供Tracy-Widom检验来判断在每一个主成分上是否群体存在显著分层，该检验的P值输出在log文件中。一般两个群体之间的Fst大于0.005时，Tracy-Widom检验就会十分显著。</p>
+<ul>
+<li><h3 id="主成分分析推断群体历史"><a href="#主成分分析推断群体历史" class="headerlink" title="主成分分析推断群体历史"></a>主成分分析推断群体历史</h3><ol>
+<li>admixture事件  </li>
+</ol>
+<p>如下图，如果A群体和B群体混合生成了C群体，那么PCA分析结果中，C群体会在AB的连线上，谁的比例多，离谁更近。但是如果该混合事件发生在很久以前，由于混合群体经历了自己特有的遗传漂变，会逐渐偏离该连线。 </p>
+<p align="center"><br><img src="http://onzjn6hm6.bkt.clouddn.com/pca_sim.png" width="400"><br></p>
+
+<p>混合事件不会改变变量空间，即上面的ABCD群体和ABD群体进行PCA分析，所得到的显著主成分一样多。</p>
+<ol>
+<li>migration事件</li>
+</ol>
+<p>如果PCA呈线性分布，与群体的地理分布距离一致，那很有可能说明了该物种的迁徙历史。如下图，左下方彩色的点表示的是狗，该分布就呈线性，与狗从亚洲东南部，经过中亚向欧洲扩散的历史相吻合。</p>
+<p align="center"><br><img src="http://onzjn6hm6.bkt.clouddn.com/pca_zhang.png" width="500"><br></p>
+
+<p>下图用撒哈拉以南的非洲人群体作为变量空间进行PCA分析，将其它人群体映射到该变量空间，发现所有其它非撒哈拉以南非洲人群体都聚在一起，暗示了人类从南非的一次迁出。  </p>
+<p align="center"><br><img src="http://onzjn6hm6.bkt.clouddn.com/pca_sahara.png" width="400"><br></p>
+
+<p>需要注意的是，PCA呈线性分布并非一定是migration造成的，isolation by distance也会形成该结构。所以要结合其它分析进行判断。</p>
+<p>长的LD片段会影响PCA分析，因此高密度的SNP数据，需要进行LD过滤（LD-based SNP Prunning）。</p>
+</li>
+<li><h3 id="利用PCA结果对关联分析进行群体结构校正"><a href="#利用PCA结果对关联分析进行群体结构校正" class="headerlink" title="利用PCA结果对关联分析进行群体结构校正"></a>利用PCA结果对关联分析进行群体结构校正</h3></li>
+</ul>
+<p>一般用前几个主成分进行校正，关联分析软件GAPIT可以实现，在以后GWAS专题会总结，这里不细说。</p>
+<p>需要注意的是，用PCA进行校正的时候，最好只用与表型相关的主成分校正，不然很容易校正过度，导致模型失去power。</p>
+<p><strong>参考文献：</strong></p>
+<p><a href="http://www.nature.com/ng/journal/v40/n5/abs/ng0508-491.html" target="_blank" rel="external">Principal component analysis of genetic data</a></p>
+<p><a href="http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.0020190" target="_blank" rel="external">Population Structure and Eigenanalysis</a></p>
+<p><a href="http://www.nature.com/ng/journal/v40/n5/abs/ng.139.html" target="_blank" rel="external">Interpreting principal component analyses of spatial<br>population genetic variation</a></p>
+<p><a href="http://www.nature.com/cr/journal/v26/n1/full/cr2015147a.html" target="_blank" rel="external">Out of southern East Asia: the natural history of domestic<br>dogs across the world</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;主成分分析是群体遗传学中常用的分析手段，一般用来 1)分析群体中存在的群体结构(分层)； 2) 推断群体历史； 3) 关联分析中对群体结构进行校正。目前用于主成分分析的数据主要为高密度的SNP标记，其主要思想是将多个线性相关的变量(SNP)，通过一系列矩阵转换，变成少数几个变异解释度大的线性无关变量(特征向量)。  &lt;/p&gt;
+&lt;p align=&quot;center&quot;&gt;&lt;br&gt;  &lt;img src=&quot;http://onzjn6hm6.bkt.clouddn.com/pca.png&quot; width=&quot;400&quot;/&gt;&lt;br&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Population_Genetics" scheme="http://www.colyfu.com/categories/Population-Genetics/"/>
+    
+    
+      <category term="主成分分析" scheme="http://www.colyfu.com/tags/%E4%B8%BB%E6%88%90%E5%88%86%E5%88%86%E6%9E%90/"/>
+    
+      <category term="映射" scheme="http://www.colyfu.com/tags/%E6%98%A0%E5%B0%84/"/>
+    
+      <category term="群体结构" scheme="http://www.colyfu.com/tags/%E7%BE%A4%E4%BD%93%E7%BB%93%E6%9E%84/"/>
+    
+      <category term="迁徙" scheme="http://www.colyfu.com/tags/%E8%BF%81%E5%BE%99/"/>
+    
+      <category term="基因流" scheme="http://www.colyfu.com/tags/%E5%9F%BA%E5%9B%A0%E6%B5%81/"/>
+    
+      <category term="smartpca" scheme="http://www.colyfu.com/tags/smartpca/"/>
+    
+  </entry>
   
   <entry>
     <title>分染色体并行计算中科学分配任务</title>
