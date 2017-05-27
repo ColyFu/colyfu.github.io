@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Haplotype Network,单体型网络,PopART,谱系地理," />
+  <meta name="keywords" content="ms软件,模拟,中性进化,群体遗传学," />
 
 
 
@@ -89,20 +89,22 @@
 
 
 
-<meta name="description" content="单体型网络（Haplotype Network）是谱系地理研究的重要手段。通过单体型网络，我们可以推断群体的起源、扩散历史。那么怎样理解单体型网络以及怎样构建单体型网络？ 什么是单体型网络？单体型（haplotype）在单体型网络中是指一段遗传连锁的核酸序列。不同的单体型，通过序列中的变异来区分（常用SNP）。一般用来进行单体型网络构建的单体型有：1）线粒体基因组；2）Y染色体；3）叶绿体基因组；">
-<meta name="keywords" content="Haplotype Network,单体型网络,PopART,谱系地理">
+<meta name="description" content="ms是中性进化条件下，群体数据模拟最常用的软件。群体数据模拟在群体遗传学研究中非常重要，可以用来评估各统计量的可靠性，研究某种群体历史下各统计量的估计值，帮助我们理解真实数据所经历的群体历史。 基本用法： 1ms nsam nreps -t θ">
+<meta name="keywords" content="ms软件,模拟,中性进化,群体遗传学">
 <meta property="og:type" content="article">
-<meta property="og:title" content="单体型网络（Haplotype Network）构建及展示">
-<meta property="og:url" content="http://www.colyfu.com/群体遗传及进化/haplotype-network.html">
+<meta property="og:title" content="群体模拟软件ms使用说明">
+<meta property="og:url" content="http://www.colyfu.com/Population-Genetics/ms-simulation.html">
 <meta property="og:site_name" content="Things worth spreading!">
-<meta property="og:description" content="单体型网络（Haplotype Network）是谱系地理研究的重要手段。通过单体型网络，我们可以推断群体的起源、扩散历史。那么怎样理解单体型网络以及怎样构建单体型网络？ 什么是单体型网络？单体型（haplotype）在单体型网络中是指一段遗传连锁的核酸序列。不同的单体型，通过序列中的变异来区分（常用SNP）。一般用来进行单体型网络构建的单体型有：1）线粒体基因组；2）Y染色体；3）叶绿体基因组；">
-<meta property="og:image" content="http://onzjn6hm6.bkt.clouddn.com/haplotype_network.png">
-<meta property="og:image" content="http://onzjn6hm6.bkt.clouddn.com/network_map.png">
-<meta property="og:updated_time" content="2017-05-08T01:14:19.000Z">
+<meta property="og:description" content="ms是中性进化条件下，群体数据模拟最常用的软件。群体数据模拟在群体遗传学研究中非常重要，可以用来评估各统计量的可靠性，研究某种群体历史下各统计量的估计值，帮助我们理解真实数据所经历的群体历史。 基本用法： 1ms nsam nreps -t θ">
+<meta property="og:image" content="http://onzjn6hm6.bkt.clouddn.com/msdoc_fig1.png">
+<meta property="og:image" content="http://onzjn6hm6.bkt.clouddn.com/msdoc_fig2.png">
+<meta property="og:image" content="http://onzjn6hm6.bkt.clouddn.com/ms_fig3.png">
+<meta property="og:image" content="http://onzjn6hm6.bkt.clouddn.com/dog_fig3.png">
+<meta property="og:updated_time" content="2017-05-27T07:33:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="单体型网络（Haplotype Network）构建及展示">
-<meta name="twitter:description" content="单体型网络（Haplotype Network）是谱系地理研究的重要手段。通过单体型网络，我们可以推断群体的起源、扩散历史。那么怎样理解单体型网络以及怎样构建单体型网络？ 什么是单体型网络？单体型（haplotype）在单体型网络中是指一段遗传连锁的核酸序列。不同的单体型，通过序列中的变异来区分（常用SNP）。一般用来进行单体型网络构建的单体型有：1）线粒体基因组；2）Y染色体；3）叶绿体基因组；">
-<meta name="twitter:image" content="http://onzjn6hm6.bkt.clouddn.com/haplotype_network.png">
+<meta name="twitter:title" content="群体模拟软件ms使用说明">
+<meta name="twitter:description" content="ms是中性进化条件下，群体数据模拟最常用的软件。群体数据模拟在群体遗传学研究中非常重要，可以用来评估各统计量的可靠性，研究某种群体历史下各统计量的估计值，帮助我们理解真实数据所经历的群体历史。 基本用法： 1ms nsam nreps -t θ">
+<meta name="twitter:image" content="http://onzjn6hm6.bkt.clouddn.com/msdoc_fig1.png">
 
 
 
@@ -130,13 +132,13 @@
 
 
 
-  <link rel="canonical" href="http://www.colyfu.com/群体遗传及进化/haplotype-network.html"/>
+  <link rel="canonical" href="http://www.colyfu.com/Population-Genetics/ms-simulation.html"/>
 
 
 
 
 
-  <title> 单体型网络（Haplotype Network）构建及展示 | Things worth spreading! </title>
+  <title> 群体模拟软件ms使用说明 | Things worth spreading! </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -319,7 +321,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://www.colyfu.com/群体遗传及进化/haplotype-network.html">
+    <link itemprop="mainEntityOfPage" href="http://www.colyfu.com/Population-Genetics/ms-simulation.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Coly Fu">
@@ -340,7 +342,7 @@
             
             
               
-                单体型网络（Haplotype Network）构建及展示
+                群体模拟软件ms使用说明
               
             
           </h2>
@@ -355,8 +357,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-08T00:24:35+08:00">
-                2017-05-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-27T15:21:17+08:00">
+                2017-05-27
               </time>
             
 
@@ -378,8 +380,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/群体遗传及进化/" itemprop="url" rel="index">
-                    <span itemprop="name">群体遗传及进化</span>
+                  <a href="/categories/Population-Genetics/" itemprop="url" rel="index">
+                    <span itemprop="name">Population_Genetics</span>
                   </a>
                 </span>
 
@@ -395,7 +397,7 @@
 
           
           
-             <span id="/群体遗传及进化/haplotype-network.html" class="leancloud_visitors" data-flag-title="单体型网络（Haplotype Network）构建及展示">
+             <span id="/Population-Genetics/ms-simulation.html" class="leancloud_visitors" data-flag-title="群体模拟软件ms使用说明">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -424,23 +426,29 @@
       
 
       
-        <p>单体型网络（Haplotype Network）是谱系地理研究的重要手段。通过单体型网络，我们可以推断群体的起源、扩散历史。那么怎样理解单体型网络以及怎样构建单体型网络？</p>
-<h3 id="什么是单体型网络？"><a href="#什么是单体型网络？" class="headerlink" title="什么是单体型网络？"></a>什么是单体型网络？</h3><p>单体型（haplotype）在单体型网络中是指一段遗传连锁的核酸序列。不同的单体型，通过序列中的变异来区分（常用SNP）。一般用来进行单体型网络构建的单体型有：1）线粒体基因组；2）Y染色体；3）叶绿体基因组；4）基因组上一段强连锁的区段。  </p>
-<p align="center"><br>  <img src="http://onzjn6hm6.bkt.clouddn.com/haplotype_network.png" width="300"><br></p>
-
+        <p><a href="http://home.uchicago.edu/rhudson1/source/mksamples.html" target="_blank" rel="external">ms</a>是中性进化条件下，群体数据模拟最常用的软件。群体数据模拟在群体遗传学研究中非常重要，可以用来评估各统计量的可靠性，研究某种群体历史下各统计量的估计值，帮助我们理解真实数据所经历的群体历史。</p>
+<p>基本用法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ms nsam nreps -t θ</div></pre></td></tr></table></figure>
 <a id="more"></a>
-<p>上图是一个单体型网络的例子，图中一个圆圈表示一个单体型，两个圆圈之间的连线表示这两个单体型相关（一个是由另一个突变而来），连线上面的短竖线表示从一个单体型到与其相连的单体型需要经历的碱基替换数，一个竖线表示一个替换。彩色的圆圈表示我们实际取样到的单体型，圆圈大小表示这种单体型的个数。灰色圆圈表示推断出来可能存在的中间单体型，没有被取样到。一种颜色一般表示一个群体，如按地理划分，品种划分等。图中例子一个单体型只存在于一个群体中，实际情况一个单体型往往在多个群体中出现。此时，一个单体型圆圈中填充多种颜色，以饼图的形式展示。<br>从上图我们可以猜测一种可能的群体历史：A群体和C群体都起源于B群体，A群体从B群体分化出来后，经历过急剧的群体扩张，导致A群体的单体型演化出多个亚型。当然，为了避免过度解读，推断群体历史需要多种证据结合起来。</p>
-<h3 id="构建单体型网络的工具"><a href="#构建单体型网络的工具" class="headerlink" title="构建单体型网络的工具"></a>构建单体型网络的工具</h3><p>比较经典的软件就是<a href="http://www.fluxus-engineering.com/sharenet.htm" target="_blank" rel="external">Network</a>了，但是该软件只支持Windows系统，用起来也比较复杂。这里推荐<a href="http://popart.otago.ac.nz/downloads.shtml" target="_blank" rel="external">PopART</a>，该软件支持Windows，Mac，Linux系统，而且用起来也非常方便，支持多种常用的Network构建方法，关键是该软件支持地图的形式展示单体型分布。下面简单介绍一下该软件的使用方法。<br>PopART的输入文件格式为NEXUS，一般主要用到两个部分DATA和TRAITS。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">#NEXUS</div><div class="line"></div><div class="line">begin data;</div><div class="line">dimensions ntax=4 nchar=30;</div><div class="line">format datatype=dna missing=N gap=-;</div><div class="line">matrix</div><div class="line">seq1 CCACCGTTGCTAAAAATTCATGACACAAGG</div><div class="line">seq2 CCACAGTTTCTAAAAATTCGTGATACAAGG</div><div class="line">seq3 CCACAGTTGCTACAAATTCATGATACAAGG</div><div class="line">seq4 CCACAGGTGCTAAAAATTCATGAAACAAGG</div><div class="line">;</div><div class="line">end;</div><div class="line"></div><div class="line">BEGIN TRAITS;</div><div class="line">    Dimensions NTRAITS=5;</div><div class="line">    Format labels=yes missing=? separator=Comma;</div><div class="line">    TraitLatitude 53 43.6811 5.4 -25.61 -0;</div><div class="line">    TraitLongitude 16.75 87.3311 26.5 134.355 -76;</div><div class="line">    TraitLabels Europe Asia Africa Australia America;</div><div class="line">    Matrix</div><div class="line">    seq1 10,5,0,6,0</div><div class="line">    seq2 0,0,5,0,0</div><div class="line">    seq3 4,0,10,0,0</div><div class="line">    seq4 0,0,0,4,2</div><div class="line">    ;</div><div class="line">END;</div></pre></td></tr></table></figure>
-<p>DATA部分主要纪录单体型信息，比较好理解。TRAITS部分主要纪录单体型来源的群体。如上所示，例子中取了来自5个大洲的样本，一共4种单体型，TRAITS纪录了每种单体型在不同大洲取样的个数，如<code>seq1</code>在<code>Europe</code>有10个，在<code>Asia</code>有5个等等。关键字TraitLatitude和TraitLongitude纪录5个群体取样地点的经纬度，该信息在单体型网络构建中可以不用，当需要用地图展示单体型地理分布时，需要填该信息。NEXUS文件生成后，打开PopART，通过<code>File -&gt; Open</code>输入NEXUS文件，然后通过菜单栏<code>Network</code>选择单体型网络构建算法，如常用的Median Joining Network。选择Median Joining Network后，会提示填写Epsilon参数，该参数用来控制推断中间单体型的细节程度，该值越大，会展示更多推断的中间单体型，一般选择默认的0就好。填好该参数后，点击<code>OK</code>，就生成了我们需要的单体型网络。然后通过菜单栏<code>Edit</code>下的选项，对图中群体的颜色、字体、图例等进行调整。<br>下面介绍一下PopART的单体型地理分布展示。</p>
-<p></p><p align="center"><br>  <img src="http://onzjn6hm6.bkt.clouddn.com/network_map.png" width="300"><br></p><br>点击<code>View -&gt; Switch to map view</code>就可以得到如上所示的单体型地理分布图。通过单体型的地理分布直观展示，我们就可以对群体的扩散迁徙途径进行推断。<p></p>
-<h3 id="单体型序列的获得"><a href="#单体型序列的获得" class="headerlink" title="单体型序列的获得"></a>单体型序列的获得</h3><p>像线粒体、叶绿体、Y染色体等这些在遗传过程中不发生重组的序列，我们直接把检测到的变异替换到参考序列中，就可以用于单体型网络构建。但是通常研究的二倍体基因组数据，由于存在重组，因此不能简单的拿一段序列就进行单体型网络构建，这样的单体型网络就失去了它本身的意义。如要用基因组上面的序列，可以通过以下步骤：  </p>
-<ol>
-<li>找到基因组上强连锁的区段；</li>
-<li>对这段区域中的SNP进行phase；</li>
-</ol>
-<p>第一步可以用<a href="https://www.cog-genomics.org/plink2" target="_blank" rel="external">PLINK</a>，命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">plink --noweb --bfile bed_prefix --blocks no-pheno-req</div></pre></td></tr></table></figure></p>
-<p>该命令运行会生成<code>.blocks.det</code>文件，该文件纪录了强连锁区段的起止位置、所包含的SNP。接下来，我们需要对感兴趣的强连锁区域的杂合SNP进行phase，构建单体型，该步可以使用软件BEAGLE。<br>第二步，使用<a href="单体型网络（Haplotype Network）构建及展示">BEAGLE</a>进行phase：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">java -Xss5m -Xmx4g -jar beagle.jar gt=prefix.vcf out=phased.vcf chrom=[chr]:[start]-[end]</div></pre></td></tr></table></figure></p>
+<p>nsam为模拟的样本数量(单倍型)，nreps为模拟的DNA片段数量，各片段之间不存在连锁。这两个参数为必需的。θ为突变参数，θ=4N<sub>0</sub>μL，详见下面参数解释。</p>
+<p>输出文件如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">ms 4 2 -t 5.0</div><div class="line">27473 36154 10290</div><div class="line">//</div><div class="line">segsites: 4</div><div class="line">positions: 0.0110 0.0765 0.6557 0.7571</div><div class="line">0010</div><div class="line">0100</div><div class="line">0000</div><div class="line">1001</div><div class="line">//</div><div class="line">segsites: 5</div><div class="line">positions: 0.0491 0.2443 0.2923 0.5984 0.8312</div><div class="line">00001</div><div class="line">00000</div><div class="line">00010</div><div class="line">11110</div></pre></td></tr></table></figure>
+<p>第一行为命令行。<br>第二行为随机数种子，用该随机数种子可以重复模拟的结果。<br>之后的数据以‘//’分隔各DNA片段。每个片段第一部分为分离位点数。第二部分为这些分离位点的相对位置，0～1之间，默认保留4位小数，可以用-p n 来修改精度，n为保留的小数位数。第三部分为基因型，每一行为一个单倍型，祖先型用0表示，突变用1表示。</p>
+<h3 id="各参数含义"><a href="#各参数含义" class="headerlink" title="各参数含义"></a>各参数含义</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="_">-f</span> filename  <span class="comment"># 参数文件，ms可以从文件读取除nsam, nreps之外的其它参数</span></div><div class="line">-seeds x1 x2 x3  <span class="comment"># 随机数种子，3个整数，一样的随机数种子可以重复结果，缺省后ms使用默认随机数种子</span></div><div class="line">-t θ  <span class="comment"># 突变率，θ=4NμL, N为二倍体群体大小, μ为突变率，L为模拟的DNA片段长度。</span></div><div class="line"><span class="_">-s</span> int <span class="comment"># 每个DNA片段生成固定的分离位点数，如果我们要模拟不连锁的SNPs，可以设置-s 1。</span></div><div class="line">-T  <span class="comment"># 输出系统发育树，newick格式。</span></div><div class="line">-L  <span class="comment"># 输出最近共同祖先的时间及总枝长，单位是4N generation。</span></div><div class="line">-p int  <span class="comment"># 保留小数位数，默认是4</span></div><div class="line">-r ρ nsites <span class="comment"># ρ=4Nr，r为模拟DNA片段两末端之间的重组率，nsites为DNA片段长度。</span></div><div class="line">-c f λ  <span class="comment"># 基因转换, f=g/r, g为每碱基转换率，如果r=0，则f=4Ng，λ为平均基因转换长度，即使ρ=0，nsites也要通过-c指定。</span></div><div class="line">-G α  <span class="comment"># 将所有群体的增长率设为α，群体呈指数增长，α为自然数e的幂。时间的单位为4N generation。</span></div><div class="line">-I npop n1 n2 ...[4Nm]  <span class="comment"># 设定一共npop个群体，每个群体的样本数分别为n1，n2 ...，群体的总基因流为4Nm，默认为0。注意，每个群体之间的基因流为4Nm/(npop-1)。</span></div><div class="line">    -n i x  <span class="comment"># 设置第i个群体大小为x*N。</span></div><div class="line">    -g i a_i  <span class="comment"># 设置第i个群体的增长率为a_i。</span></div><div class="line">    -m i j Mij  <span class="comment"># 设置群体j到群体i的基因流为Mij，单位为4N generation。</span></div><div class="line">    -ma M11, M12...M21, M22...  <span class="comment"># 设置基因流矩阵。i=j的时候，是没有任何意义的，ms会忽略，可以用x代替。</span></div><div class="line"><span class="_">-e</span>G t a  <span class="comment"># 设置时间t的时候，所有群体的增长率，注意ms模拟的逻辑是backward，所有的时间都是距离当前的时间，单位为4N generation。</span></div><div class="line">-eg t i ai <span class="comment"># 设置时间t的时候，i群体的增长率为ai。</span></div><div class="line"><span class="_">-e</span>N t x  <span class="comment"># 设置时间t的时候，所有群体的大小为x*N，注意，此设置默认效果是所有群体的增长率变为0。因此，要使同一时间的增长率生效，增长率设置要在群体大小设置之后。</span></div><div class="line">-en t i x  <span class="comment"># 设置i亚群的增长率，效果同上。</span></div><div class="line"><span class="_">-e</span>M t x  <span class="comment"># 设置t时间所有群体之间的基因流为x/(npop-1)。</span></div><div class="line">-em t i j x  <span class="comment"># 设置时间t，j 到i的基因流4Nmij=x。</span></div><div class="line">-ema t npop M11, M12...  <span class="comment"># 设置t时间的基因流矩阵。</span></div><div class="line">-es t i p  <span class="comment"># t时间i群体分为i和npop+1两个亚群，i中每个个体分到新i的概率为p，分到npop+1的概率为1-p。新群体的基因流和增长率都为0，群体大小设为N，i群体的基因流增长率不变。从正向历史来看，这是一个admixture事件。</span></div><div class="line">-ej t i j  <span class="comment"># t时间，i群体所有个体合并到j群体，i群体到其它群体的基因流都变为0，增长率不变。从正向历史来看，这是一个群体分化事件。</span></div></pre></td></tr></table></figure>
+<p><em>注: 以上N皆指</em> N<sub>0</sub>， <em>因为在markdown的代码块里面，html标记不生效</em></p>
+<h3 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h3><h4 id="1-群体大小瞬间收缩然后指数扩增"><a href="#1-群体大小瞬间收缩然后指数扩增" class="headerlink" title="1. 群体大小瞬间收缩然后指数扩增"></a>1. 群体大小瞬间收缩然后指数扩增</h4><p align="center"><br>  <img src="http://onzjn6hm6.bkt.clouddn.com/msdoc_fig1.png" width="400"><br></p>
+
+<p>图中N<sub>1</sub>=10,000，N<sub>2</sub>=5,000，N<sub>3</sub>=20,000，如果突变率为每代10<sup>-8</sup>，如果模拟的DNA片段长度为8,000 bp，将N<sub>0</sub>设置为20,000，则θ=4*20000*10<sup>-8</sup>*8000=6.40，如果T1是16000代，则转为4N<sub>0</sub>代单位为16000/(4*20000)=0.2，T2为24000代，即0.3以4N<sub>0</sub>代为单位。5000=20000*exp<sup>-a0.2</sup>，算出a为6.93。如果该群体取15个样本，模拟1000个DNA片段，ms命令如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ms 15 1000 -t 6.4 -G 6.93 <span class="_">-e</span>G 0.2 0.0 <span class="_">-e</span>N 0.3 0.5</div></pre></td></tr></table></figure></p>
+<h4 id="2-两个群体分化后经历不同的群体大小变化"><a href="#2-两个群体分化后经历不同的群体大小变化" class="headerlink" title="2. 两个群体分化后经历不同的群体大小变化"></a>2. 两个群体分化后经历不同的群体大小变化</h4><p align="center"><br>  <img src="http://onzjn6hm6.bkt.clouddn.com/msdoc_fig2.png" width="400"><br></p>
+
+<p>各个参数的计算参考1，不再赘述，只给每个模型的ms命令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ms 15 100 -t 11.2 -I 2 3 12 -g 1 44.36 -n 2 0.125 -eg 0.03125 1</div><div class="line">0.0 -en 0.0625 2 0.05 -ej 0.09375 2 1</div></pre></td></tr></table></figure>
+<h4 id="3-近期隔离的踏脚石模型"><a href="#3-近期隔离的踏脚石模型" class="headerlink" title="3. 近期隔离的踏脚石模型"></a>3. 近期隔离的踏脚石模型</h4><p align="center"><br>  <img src="http://onzjn6hm6.bkt.clouddn.com/ms_fig3.png" width="400"><br></p>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ms 15 100 -t 3.0 -I 6 0 7 0 0 8 0 -m 1 2 2.5 -m 2 1 2.5 -m 2 3 2.5</div><div class="line">-m 3 2 2.5 -m 4 5 2.5 -m 5 4 2.5 -m 5 6 2.5 -m 6 5 2.5 -em 2.0 3 4</div><div class="line">2.5 -em 2.0 4 3 2.5</div></pre></td></tr></table></figure>
+<h4 id="4-近期Admixture事件"><a href="#4-近期Admixture事件" class="headerlink" title="4. 近期Admixture事件"></a>4. 近期Admixture事件</h4><p align="center"><br>  <img src="http://onzjn6hm6.bkt.clouddn.com/dog_fig3.png" width="400"><br></p>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">ms 76 50000 <span class="_">-s</span> 1 -I 17 24 22 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 \</div><div class="line">-n 1 1 -n 2 0.3333 -n 3 0.25 -n 4 0.25 -n 5 0.2 -n 6 0.2 -n 7 0.2 -n 8 0.2 \</div><div class="line">-n 9 0.2 -n 10 0.2 -n 11 0.2 -n 12 0.2 -n 13 0.2 -n 14 0.2 -n 15 0.2 \</div><div class="line">-n 16 0.2 -n 17 0.2 \</div><div class="line">-es 0.0003125 5 0.5 -en 0.0003125 5 0.2 -ej 0.0003125 18 2 \</div><div class="line">-es 0.0003125 6 0.5 -en 0.0003125 6 0.2 -ej 0.0003125 19 2 \</div><div class="line">-ej 0.01041667 6 5 -ej 0.01041667 7 5 -ej 0.01041667 8 5 -ej 0.01041667 9 5 \</div><div class="line">-ej 0.01041667 10 5 -ej 0.01041667 11 5 -ej 0.01041667 12 5 \</div><div class="line">-ej 0.01041667 13 5 -ej 0.01041667 14 5 -ej 0.01041667 15 5 \</div><div class="line">-ej 0.01041667 16 5 -ej 0.01041667 17 5 -ej 0.01354167 5 4 \</div><div class="line">-ej 0.01458333 4 3 -ej 0.015625 3 2 -ej 0.034375 2 1</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -491,13 +499,13 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Haplotype-Network/" rel="tag"># Haplotype Network</a>
+            <a href="/tags/ms软件/" rel="tag"># ms软件</a>
           
-            <a href="/tags/单体型网络/" rel="tag"># 单体型网络</a>
+            <a href="/tags/模拟/" rel="tag"># 模拟</a>
           
-            <a href="/tags/PopART/" rel="tag"># PopART</a>
+            <a href="/tags/中性进化/" rel="tag"># 中性进化</a>
           
-            <a href="/tags/谱系地理/" rel="tag"># 谱系地理</a>
+            <a href="/tags/群体遗传学/" rel="tag"># 群体遗传学</a>
           
         </div>
       
@@ -510,18 +518,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/programming/split-ref.html" rel="next" title="分染色体并行计算中科学分配任务">
-                <i class="fa fa-chevron-left"></i> 分染色体并行计算中科学分配任务
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/文献导读/paper-express-201704.html" rel="prev" title="文献速递 (2017年4月)">
-                文献速递 (2017年4月) <i class="fa fa-chevron-right"></i>
+              <a href="/Population-Genetics/pca-interpret.html" rel="prev" title="主成分分析及其解读">
+                主成分分析及其解读 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -660,7 +664,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是单体型网络？"><span class="nav-number">1.</span> <span class="nav-text">什么是单体型网络？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#构建单体型网络的工具"><span class="nav-number">2.</span> <span class="nav-text">构建单体型网络的工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单体型序列的获得"><span class="nav-number">3.</span> <span class="nav-text">单体型序列的获得</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#各参数含义"><span class="nav-number">1.</span> <span class="nav-text">各参数含义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#例子"><span class="nav-number">2.</span> <span class="nav-text">例子</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-群体大小瞬间收缩然后指数扩增"><span class="nav-number">2.1.</span> <span class="nav-text">1. 群体大小瞬间收缩然后指数扩增</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-两个群体分化后经历不同的群体大小变化"><span class="nav-number">2.2.</span> <span class="nav-text">2. 两个群体分化后经历不同的群体大小变化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-近期隔离的踏脚石模型"><span class="nav-number">2.3.</span> <span class="nav-text">3. 近期隔离的踏脚石模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-近期Admixture事件"><span class="nav-number">2.4.</span> <span class="nav-text">4. 近期Admixture事件</span></a></li></ol></li></ol></div>
             
 
           </div>
