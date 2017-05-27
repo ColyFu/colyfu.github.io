@@ -357,10 +357,10 @@
   
   <entry>
     <title>GWAS如何确定候选区间和causal gene</title>
-    <link href="http://www.colyfu.com/GWAS/GWAS%E5%A6%82%E4%BD%95%E7%A1%AE%E5%AE%9A%E5%80%99%E9%80%89%E5%8C%BA%E9%97%B4%E5%92%8Ccausal-gene.html"/>
-    <id>http://www.colyfu.com/GWAS/GWAS如何确定候选区间和causal-gene.html</id>
+    <link href="http://www.colyfu.com/GWAS/GWAS-candidate.html"/>
+    <id>http://www.colyfu.com/GWAS/GWAS-candidate.html</id>
     <published>2017-04-09T12:33:37.000Z</published>
-    <updated>2017-04-25T13:47:14.000Z</updated>
+    <updated>2017-05-27T12:17:39.000Z</updated>
     
     <content type="html"><![CDATA[<p>随着高通量测序成本的急剧下降，越来越多的GWAS研究通过全基因组重测序获得标记。全基因组重测序的高密度标记，使得通过GWAS研究快速找到causal gene甚至causal mutation成为可能。但是通过GWAS得到一个信号后，怎么确定与这个信号关联的基因呢？  </p>
 <a id="more"></a>
