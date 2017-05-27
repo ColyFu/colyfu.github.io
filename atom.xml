@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.colyfu.com/"/>
-  <updated>2017-05-27T07:33:38.000Z</updated>
+  <updated>2017-05-27T11:48:38.000Z</updated>
   <id>http://www.colyfu.com/</id>
   
   <author>
@@ -14,6 +14,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>python按指定分隔符读取文件</title>
+    <link href="http://www.colyfu.com/programming/blockread-python.html"/>
+    <id>http://www.colyfu.com/programming/blockread-python.html</id>
+    <published>2017-05-27T11:46:02.000Z</published>
+    <updated>2017-05-27T11:48:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>在处理一些结构化的文件，如fasta文件，我们往往需要读完一条记录再进行处理，如计算每条序列的长度，GC含量等等。这个时候通常的做法是按行读，先把内容存在一个临时变量，直到读到下一个区块分隔符（如fasta文件的‘&gt;‘）的时候再处理上一条记录。如果文件不大，也可以一次读进内存，然后用split分割。前一种方法逻辑有点绕，而且容易忘记处理最后一条记录。而后一种方法对于大文件的处理就不适用了。</p>
+<a id="more"></a>
+<p>有没有什么方法让python以指定的分隔符读文件，而不是默认的换行符呢？我们知道perl有内建的<code>$/</code>变量来修改perl的默认文件分隔符，如设置<code>$/=&#39;&gt;&#39;</code>后，perl就可以每次读一条fasta记录。但是据我了解，python并没有类似的内建方法。这里提供一个十分方便的函数来按指定分隔符读文件：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">blockread</span><span class="params">(fh, sep)</span>:</span></div><div class="line">    buf = <span class="string">""</span></div><div class="line">    <span class="keyword">while</span> <span class="keyword">True</span>:</div><div class="line">        <span class="keyword">while</span> sep <span class="keyword">in</span> buf:</div><div class="line">            pos = buf.index(sep)</div><div class="line">            <span class="keyword">yield</span> buf[:pos]</div><div class="line">            buf = buf[pos + len(sep):]</div><div class="line">        chunk = fh.read(<span class="number">4096</span>)</div><div class="line">        <span class="keyword">if</span> <span class="keyword">not</span> chunk:</div><div class="line">            <span class="keyword">yield</span> buf</div><div class="line">            <span class="keyword">break</span></div><div class="line">        buf += chunk</div></pre></td></tr></table></figure>
+<p>函数第一个参数为文件句柄，第二个参数为分隔符。如果我们想遍历一个fasta文件，每次读一条fasta记录，可以使用<code>for each in blockread(open(&#39;filename&#39;), &#39;&gt;&#39;):</code>。该函数主要是用到<code>yield</code>来生成一个可迭代对象。函数的分隔符需要是字符串，经过简单修改，也可以用正则表达式作为分隔符。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;在处理一些结构化的文件，如fasta文件，我们往往需要读完一条记录再进行处理，如计算每条序列的长度，GC含量等等。这个时候通常的做法是按行读，先把内容存在一个临时变量，直到读到下一个区块分隔符（如fasta文件的‘&amp;gt;‘）的时候再处理上一条记录。如果文件不大，也可以一次读进内存，然后用split分割。前一种方法逻辑有点绕，而且容易忘记处理最后一条记录。而后一种方法对于大文件的处理就不适用了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="programming" scheme="http://www.colyfu.com/categories/programming/"/>
+    
+    
+      <category term="python" scheme="http://www.colyfu.com/tags/python/"/>
+    
+      <category term="文件分隔符" scheme="http://www.colyfu.com/tags/%E6%96%87%E4%BB%B6%E5%88%86%E9%9A%94%E7%AC%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>群体模拟软件ms使用说明</title>
@@ -185,10 +214,10 @@
   
   <entry>
     <title>单体型网络（Haplotype Network）构建及展示</title>
-    <link href="http://www.colyfu.com/%E7%BE%A4%E4%BD%93%E9%81%97%E4%BC%A0%E5%8F%8A%E8%BF%9B%E5%8C%96/haplotype-network.html"/>
-    <id>http://www.colyfu.com/群体遗传及进化/haplotype-network.html</id>
+    <link href="http://www.colyfu.com/Population-Genetics/haplotype-network.html"/>
+    <id>http://www.colyfu.com/Population-Genetics/haplotype-network.html</id>
     <published>2017-05-07T16:24:35.000Z</published>
-    <updated>2017-05-08T01:14:19.000Z</updated>
+    <updated>2017-05-27T11:53:17.000Z</updated>
     
     <content type="html"><![CDATA[<p>单体型网络（Haplotype Network）是谱系地理研究的重要手段。通过单体型网络，我们可以推断群体的起源、扩散历史。那么怎样理解单体型网络以及怎样构建单体型网络？</p>
 <h3 id="什么是单体型网络？"><a href="#什么是单体型网络？" class="headerlink" title="什么是单体型网络？"></a>什么是单体型网络？</h3><p>单体型（haplotype）在单体型网络中是指一段遗传连锁的核酸序列。不同的单体型，通过序列中的变异来区分（常用SNP）。一般用来进行单体型网络构建的单体型有：1）线粒体基因组；2）Y染色体；3）叶绿体基因组；4）基因组上一段强连锁的区段。  </p>
@@ -217,7 +246,7 @@
     
     </summary>
     
-      <category term="群体遗传及进化" scheme="http://www.colyfu.com/categories/%E7%BE%A4%E4%BD%93%E9%81%97%E4%BC%A0%E5%8F%8A%E8%BF%9B%E5%8C%96/"/>
+      <category term="Population_Genetics" scheme="http://www.colyfu.com/categories/Population-Genetics/"/>
     
     
       <category term="Haplotype Network" scheme="http://www.colyfu.com/tags/Haplotype-Network/"/>
@@ -232,10 +261,10 @@
   
   <entry>
     <title>文献速递 (2017年4月)</title>
-    <link href="http://www.colyfu.com/%E6%96%87%E7%8C%AE%E5%AF%BC%E8%AF%BB/paper-express-201704.html"/>
-    <id>http://www.colyfu.com/文献导读/paper-express-201704.html</id>
+    <link href="http://www.colyfu.com/paper-express/paper-express-201704.html"/>
+    <id>http://www.colyfu.com/paper-express/paper-express-201704.html</id>
     <published>2017-05-02T14:16:47.000Z</published>
-    <updated>2017-05-03T01:37:50.000Z</updated>
+    <updated>2017-05-27T11:53:55.000Z</updated>
     
     <content type="html"><![CDATA[<h4 id="The-Rice-Paradox-Multiple-Origins-but-Single-Domestication-in-Asian-Rice"><a href="#The-Rice-Paradox-Multiple-Origins-but-Single-Domestication-in-Asian-Rice" class="headerlink" title="The Rice Paradox: Multiple Origins but Single Domestication in Asian Rice"></a><a href="https://academic.oup.com/mbe/article/34/4/969/2897272/The-Rice-Paradox-Multiple-Origins-but-Single" target="_blank" rel="external">The Rice Paradox: Multiple Origins but Single Domestication in Asian Rice</a></h4><p>Mol Biol Evol (2017) 34 (4): 969-979.<br>通过对几种栽培水稻和野生祖先的基因组比较，发现不同栽培稻亚种分别来自不同的野生祖先，但是只经历了一次驯化事件。<br>最先被驯化的是<em>O. sativa</em> ssp. japonica，与<em>O. rufipogon</em>大概在∼13.1–24.1 ka前分歧。japonica与indica和aus的驯化前体存在基因流，导致后两者获得了驯化基因型。</p>
 <h4 id="Genome-Sequencing-Reveals-the-Origin-of-the-Allotetraploid-Arabidopsis-suecica"><a href="#Genome-Sequencing-Reveals-the-Origin-of-the-Allotetraploid-Arabidopsis-suecica" class="headerlink" title="Genome Sequencing Reveals the Origin of the Allotetraploid Arabidopsis suecica"></a><a href="https://academic.oup.com/mbe/article/34/4/957/2838775/Genome-Sequencing-Reveals-the-Origin-of-the" target="_blank" rel="external">Genome Sequencing Reveals the Origin of the Allotetraploid Arabidopsis suecica</a></h4><p>Mol Biol Evol (2017) 34 (4): 957-968.<br>对15个异源四倍体拟南芥<em>Arabidopsis suecica</em>进行了重测序。发现其与多个祖先物种共享多态性，排除了单一起源。该物种大概在末次盛冰期(LGM)的东欧或欧亚大陆中部出现。还发现两个自交不亲和基因都没有功能。</p>
@@ -277,7 +306,7 @@
     
     </summary>
     
-      <category term="文献导读" scheme="http://www.colyfu.com/categories/%E6%96%87%E7%8C%AE%E5%AF%BC%E8%AF%BB/"/>
+      <category term="paper_express" scheme="http://www.colyfu.com/categories/paper-express/"/>
     
     
       <category term="文献导读" scheme="http://www.colyfu.com/tags/%E6%96%87%E7%8C%AE%E5%AF%BC%E8%AF%BB/"/>
