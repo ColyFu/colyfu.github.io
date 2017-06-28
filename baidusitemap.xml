@@ -4,6 +4,36 @@
 
     
   <url>
+    <loc>http://www.colyfu.com/genomics/liftover-chain.html</loc>
+    <lastmod>2017-06-28T09:55:17.000Z</lastmod>
+    <data>
+        <display>
+        <title>LiftOver chain 文件创建流程</title>
+        <pubTime>2017-06-28T09:49:20.000Z</pubTime>
+        
+        <tag>LiftOver</tag>
+         
+        <tag>chain</tag>
+         
+        <tag>CrossMap</tag>
+         
+        <tag>pyliftover</tag>
+         
+        <tag>UCSC</tag>
+         
+        <tag>基因组序列位置对应</tag>
+         
+         
+           
+             
+              <breadCrumb title="genomics" url="http://www.colyfu.com/categories/genomics/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.colyfu.com/paper-express/paper-express-201705.html</loc>
     <lastmod>2017-06-03T10:38:53.000Z</lastmod>
     <data>

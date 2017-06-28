@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.colyfu.com/"/>
-  <updated>2017-06-03T10:38:53.000Z</updated>
+  <updated>2017-06-28T09:55:17.000Z</updated>
   <id>http://www.colyfu.com/</id>
   
   <author>
@@ -14,6 +14,57 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LiftOver chain 文件创建流程</title>
+    <link href="http://www.colyfu.com/genomics/liftover-chain.html"/>
+    <id>http://www.colyfu.com/genomics/liftover-chain.html</id>
+    <published>2017-06-28T09:49:20.000Z</published>
+    <updated>2017-06-28T09:55:17.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>当我们所研究的物种有多个基因组组装版本的时候，我们往往需要将两个版本的位置对应起来。比如某个版本注释了某些转录因子，而另外一个版本没有注释，我们需要知道这些转录因子在另一个版本的位置。比如早期的QTL研究是基于老版本的参考序列，我们需要知道这些QTL在新版本参考序列中的位置等等。</p>
+<p>最常用的工具是UCSC的<a href="https://genome.ucsc.edu/cgi-bin/hgLiftOver" target="_blank" rel="external">LiftOver</a>，如果你所研究的物种刚好是LiftOver支持的物种，那很幸运，可以直接使用其在线工具，或者下载<a href="http://hgdownload.cse.ucsc.edu/downloads.html#liftover" target="_blank" rel="external">chain</a>文件后，通过<a href="https://pypi.python.org/pypi/pyliftover" target="_blank" rel="external">pyliftover</a>或<a href="http://crossmap.sourceforge.net/index.html" target="_blank" rel="external">CrossMap</a>等工具转换。如果没有做好的chain文件，那需要自己生成。UCSC对于自行生成chain文件有详细的<a href="http://genomewiki.ucsc.edu/index.php/Same_species_lift_over_construction" target="_blank" rel="external">pipeline</a>，所以这篇博客不对每一步作详细说明，只提供主要步骤说明，并避开UCSC流程中的一些坑。</p>
+<a id="more"></a>
+<ul>
+<li>BLAT比对</li>
+</ul>
+<p>既然要对应两个序列，那最直接的方式就是比对了，liftover原理主要基于此，并把位置关系存在chain文件中，用于后续查询。参考序列相近，比如同个物种的两个不同组装版本，可以用blat比对，如果是不同物种，则需要用<a href="http://genomewiki.ucsc.edu/index.php/Whole_genome_alignment_howto" target="_blank" rel="external">blastz</a>进行比对。</p>
+<p>我对UCSC的pipeline进行了一些修改，命名为<a href="https://pan.baidu.com/s/1i57Rnhj" target="_blank" rel="external">chain_step*.sh</a>，中间需要修改或注意的地方加了注释。在运行之前，需要 1) 下载并编译好UCSC的<a href="https://github.com/ENCODE-DCC/kentUtils" target="_blank" rel="external">kentUtils</a>，liftover主要用到其中一系列工具。2) 将需要对应的两个参考序列转为2bit格式，并放在同一个目录下，可以用kentUtils的<code>twoBitToFa</code>进行转换。3）修改<code>chain_step1.sh</code>中的必要参数。主要需要修改的是kentUtils路径，工作路径，两个2bit格式参考序列前缀。需要指出的是，targetDb为已知位置的序列，queryDb为查询序列，即将targetDb的位置转为queryDb的位置。</p>
+<p>运行该步后，会在run.blat目录下生成一个jobList，如果任务少，可以直接<code>sh jobList</code>运行，如果任务多，可以在集群上用SGE投递任务。运行需要<code>blatJob.csh</code>脚本，注意修改blatJob.csh中blat和kentUtils路径。</p>
+<p><strong>最大的坑出现了!!!</strong></p>
+<p>jobList里面的任务运行完之后，并不能直接运行流程接下来的部分，这是UCSC流程最大的坑。在<code>run.blat/psl/*/</code>目录下，生成了一系列的psl格式的比对结果，需要对该结果进行修改，主要是因为对targetDb序列进行了切割，psl文件里面记录的染色体名和长度以及比对的位置都需要进行调整。该调整可以通过脚本<code>change_psl.py</code>实现，如需要对所有psl文件进行调整，则在psl目录下运行<code>ls */*.psl|while read a;do python change_psl.py $a target.fa.fai ;done</code>，其中target.fa.fai是待转换参考序列fa格式的fai文件，通过<code>samtools faidx target.fa</code>生成。</p>
+<ul>
+<li>生成chain文件</li>
+</ul>
+<p>第一步完成后，接下来就比较简单了。在工作目录下运行<code>chain_step2.sh</code>后，会在<code>run.chain</code>目录下生成<code>jobList</code>，直接运行或拆分后用SGE投递。<br>jobList任务运行结束后，在工作目录运行<code>chain_step3.sh</code>，会在<code>run.chain</code>目录下生成<code>doNet.csh</code>，直接运行该脚本。注意修改step2和step3脚本中的路径。</p>
+<p>运行结束后，会在工作目录生成后缀为<code>.over.chain.gz</code>的压缩文件，该文件就是我们需要的chain文件。</p>
+<p>至此，大功告成！</p>
+<p>利用该文件，就可以使用CrossMap对bed/gtf/gff/bam/vcf等文件中的参考序列位置进行转换。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;当我们所研究的物种有多个基因组组装版本的时候，我们往往需要将两个版本的位置对应起来。比如某个版本注释了某些转录因子，而另外一个版本没有注释，我们需要知道这些转录因子在另一个版本的位置。比如早期的QTL研究是基于老版本的参考序列，我们需要知道这些QTL在新版本参考序列中的位置等等。&lt;/p&gt;
+&lt;p&gt;最常用的工具是UCSC的&lt;a href=&quot;https://genome.ucsc.edu/cgi-bin/hgLiftOver&quot;&gt;LiftOver&lt;/a&gt;，如果你所研究的物种刚好是LiftOver支持的物种，那很幸运，可以直接使用其在线工具，或者下载&lt;a href=&quot;http://hgdownload.cse.ucsc.edu/downloads.html#liftover&quot;&gt;chain&lt;/a&gt;文件后，通过&lt;a href=&quot;https://pypi.python.org/pypi/pyliftover&quot;&gt;pyliftover&lt;/a&gt;或&lt;a href=&quot;http://crossmap.sourceforge.net/index.html&quot;&gt;CrossMap&lt;/a&gt;等工具转换。如果没有做好的chain文件，那需要自己生成。UCSC对于自行生成chain文件有详细的&lt;a href=&quot;http://genomewiki.ucsc.edu/index.php/Same_species_lift_over_construction&quot;&gt;pipeline&lt;/a&gt;，所以这篇博客不对每一步作详细说明，只提供主要步骤说明，并避开UCSC流程中的一些坑。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="genomics" scheme="http://www.colyfu.com/categories/genomics/"/>
+    
+    
+      <category term="LiftOver" scheme="http://www.colyfu.com/tags/LiftOver/"/>
+    
+      <category term="chain" scheme="http://www.colyfu.com/tags/chain/"/>
+    
+      <category term="CrossMap" scheme="http://www.colyfu.com/tags/CrossMap/"/>
+    
+      <category term="pyliftover" scheme="http://www.colyfu.com/tags/pyliftover/"/>
+    
+      <category term="UCSC" scheme="http://www.colyfu.com/tags/UCSC/"/>
+    
+      <category term="基因组序列位置对应" scheme="http://www.colyfu.com/tags/%E5%9F%BA%E5%9B%A0%E7%BB%84%E5%BA%8F%E5%88%97%E4%BD%8D%E7%BD%AE%E5%AF%B9%E5%BA%94/"/>
+    
+  </entry>
   
   <entry>
     <title>文献速递 (2017年5月)</title>
