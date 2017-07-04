@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://www.colyfu.com/paper-express/paper-express-201706.html</loc>
+    <lastmod>2017-07-04T02:59:19.000Z</lastmod>
+    <data>
+        <display>
+        <title>文献速递 (2017年6月)</title>
+        <pubTime>2017-07-04T02:56:59.000Z</pubTime>
+        
+        <tag>文献导读</tag>
+         
+         
+           
+             
+              <breadCrumb title="paper_express" url="http://www.colyfu.com/categories/paper-express/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.colyfu.com/genomics/liftover-chain.html</loc>
-    <lastmod>2017-06-28T09:55:17.000Z</lastmod>
+    <lastmod>2017-06-29T03:47:31.000Z</lastmod>
     <data>
         <display>
         <title>LiftOver chain 文件创建流程</title>

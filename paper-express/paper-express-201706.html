@@ -1,0 +1,1081 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="文献导读," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Things worth spreading!" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="A Critical Review on the Use of Support Values in Tree Viewers and Bioinformatics Toolkits &amp;gt;&amp;gt;&amp;gt;Mol Biol Evol (2017) 34 (6): 1535-1542.一般系统发育树以Newick格式储存，其中branch values如bootstrap等以node label的形">
+<meta name="keywords" content="文献导读">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文献速递 (2017年6月)">
+<meta property="og:url" content="http://www.colyfu.com/paper-express/paper-express-201706.html">
+<meta property="og:site_name" content="Things worth spreading!">
+<meta property="og:description" content="A Critical Review on the Use of Support Values in Tree Viewers and Bioinformatics Toolkits &amp;gt;&amp;gt;&amp;gt;Mol Biol Evol (2017) 34 (6): 1535-1542.一般系统发育树以Newick格式储存，其中branch values如bootstrap等以node label的形">
+<meta property="og:updated_time" content="2017-07-04T02:59:19.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="文献速递 (2017年6月)">
+<meta name="twitter:description" content="A Critical Review on the Use of Support Values in Tree Viewers and Bioinformatics Toolkits &amp;gt;&amp;gt;&amp;gt;Mol Biol Evol (2017) 34 (6): 1535-1542.一般系统发育树以Newick格式储存，其中branch values如bootstrap等以node label的形">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.colyfu.com/paper-express/paper-express-201706.html"/>
+
+
+
+
+
+  <title> 文献速递 (2017年6月) | Things worth spreading! </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?da55ad3ecaab6360dc40a9dc42aaa258";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Things worth spreading!</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">Knowledge is a good thing, and good things are worth spreading!</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocapitalize="off" autocomplete="off" autocorrect="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://www.colyfu.com/paper-express/paper-express-201706.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Coly Fu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="http://onzjn6hm6.bkt.clouddn.com/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Things worth spreading!">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">
+            
+            
+              
+                文献速递 (2017年6月)
+              
+            
+          </h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-04T10:56:59+08:00">
+                2017-07-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/paper-express/" itemprop="url" rel="index">
+                    <span itemprop="name">paper_express</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/paper-express/paper-express-201706.html" class="leancloud_visitors" data-flag-title="文献速递 (2017年6月)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h4 id="A-Critical-Review-on-the-Use-of-Support-Values-in-Tree-Viewers-and-Bioinformatics-Toolkits-gt-gt-gt"><a href="#A-Critical-Review-on-the-Use-of-Support-Values-in-Tree-Viewers-and-Bioinformatics-Toolkits-gt-gt-gt" class="headerlink" title="A Critical Review on the Use of Support Values in Tree Viewers and Bioinformatics Toolkits &gt;&gt;&gt;"></a>A Critical Review on the Use of Support Values in Tree Viewers and Bioinformatics Toolkits <a href="https://academic.oup.com/mbe/article/34/6/1535/3077051/A-Critical-Review-on-the-Use-of-Support-Values-in" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Mol Biol Evol (2017) 34 (6): 1535-1542.<br>一般系统发育树以Newick格式储存，其中branch values如bootstrap等以node label的形式储存，在用软件如figtree进行rerooting的时候，会出现错误。文章对20种软件进行了测试，发现其中14个都会出现问题。</p>
+<h4 id="New-Statistical-Criteria-Detect-Phylogenetic-Bias-Caused-by-Compositional-Heterogeneity-gt-gt-gt"><a href="#New-Statistical-Criteria-Detect-Phylogenetic-Bias-Caused-by-Compositional-Heterogeneity-gt-gt-gt" class="headerlink" title="New Statistical Criteria Detect Phylogenetic Bias Caused by Compositional Heterogeneity &gt;&gt;&gt;"></a>New Statistical Criteria Detect Phylogenetic Bias Caused by Compositional Heterogeneity <a href="https://academic.oup.com/mbe/article-abstract/34/6/1529/3038448/New-Statistical-Criteria-Detect-Phylogenetic-Bias?redirectedFrom=fulltext" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Mol Biol Evol (2017) 34 (6): 1529-1534.<br>构建系统发育树的进化模型一般假定DNA序列的碱基组成是恒定的，但是实际数据并不符合。文章对碱基组成异质性对系统发育树的拓扑结构、枝长的影响进行了评估。  </p>
+<a id="more"></a>
+<h4 id="Genetic-Diversity-and-the-Efficacy-of-Purifying-Selection-across-Plant-and-Animal-Species-gt-gt-gt"><a href="#Genetic-Diversity-and-the-Efficacy-of-Purifying-Selection-across-Plant-and-Animal-Species-gt-gt-gt" class="headerlink" title="Genetic Diversity and the Efficacy of Purifying Selection across Plant and Animal Species &gt;&gt;&gt;"></a>Genetic Diversity and the Efficacy of Purifying Selection across Plant and Animal Species <a href="https://academic.oup.com/mbe/article-abstract/34/6/1417/3049540/Genetic-Diversity-and-the-Efficacy-of-Purifying?redirectedFrom=fulltext" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Mol Biol Evol (2017) 34 (6): 1417-1428.<br>为什么有的物种比其它物种遗传多样性告以及为什么选择效应在不同物种中差异很大，这事进化生物学的两个中心问题。作者通过对34个动物和28个植物的全基因组数据，比较他们的同义和非同义突变发现，动物的寿命和繁殖数量是解释其非同义突变数量最好的因素。植物的寿命和交配系统一样起着主要作用。非同义比统一突变的对数和同义突变的数量呈负线性关系，但是植物的斜率要低于动物，可能是因为植物的突变率高于动物。  </p>
+<h4 id="Contrasting-Rates-of-Molecular-Evolution-and-Patterns-of-Selection-among-Gymnosperms-and-Flowering-Plants-gt-gt-gt"><a href="#Contrasting-Rates-of-Molecular-Evolution-and-Patterns-of-Selection-among-Gymnosperms-and-Flowering-Plants-gt-gt-gt" class="headerlink" title="Contrasting Rates of Molecular Evolution and Patterns of Selection among Gymnosperms and Flowering Plants &gt;&gt;&gt;"></a>Contrasting Rates of Molecular Evolution and Patterns of Selection among Gymnosperms and Flowering Plants <a href="https://academic.oup.com/mbe/article/34/6/1363/3053316/Contrasting-Rates-of-Molecular-Evolution-and" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Mol Biol Evol (2017) 34 (6): 1363-1377.<br>被子植物是裸子植物分子进化速率的7倍，裸子植物较大的基因组和长代时是进化速率慢的原因，裸子植物具有更高的替换率比（非同义比同义？）。裸子植物具有更强和更有效的纯化和多样化选择，可能是由于其较大的有效群体大小。</p>
+<h4 id="Mitochondrial-Mutation-Rate-Spectrum-and-Heteroplasmy-in-Caenorhabditis-elegans-Spontaneous-Mutation-Accumulation-Lines-of-Differing-Population-Size-gt-gt-gt"><a href="#Mitochondrial-Mutation-Rate-Spectrum-and-Heteroplasmy-in-Caenorhabditis-elegans-Spontaneous-Mutation-Accumulation-Lines-of-Differing-Population-Size-gt-gt-gt" class="headerlink" title="Mitochondrial Mutation Rate, Spectrum and Heteroplasmy in Caenorhabditis elegans Spontaneous Mutation Accumulation Lines of Differing Population Size &gt;&gt;&gt;"></a>Mitochondrial Mutation Rate, Spectrum and Heteroplasmy in Caenorhabditis elegans Spontaneous Mutation Accumulation Lines of Differing Population Size <a href="https://academic.oup.com/mbe/article-abstract/34/6/1319/2897276/Mitochondrial-Mutation-Rate-Spectrum-and?redirectedFrom=fulltext" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Mol Biol Evol (2017) 34 (6): 1319-1334.<br>不同群体大小下新杆状线虫自发突变累计系的线粒体突变率、频谱和异质性。</p>
+<h4 id="Optimal-sequencing-strategies-for-identifying-disease-associated-singletons-gt-gt-gt"><a href="#Optimal-sequencing-strategies-for-identifying-disease-associated-singletons-gt-gt-gt" class="headerlink" title="Optimal sequencing strategies for identifying disease-associated singletons &gt;&gt;&gt;"></a>Optimal sequencing strategies for identifying disease-associated singletons <a href="http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1006811" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>PLoS Genet 13(6): e1006811.<br>作者对测序深度对singletons突变关联把握度（power）的影响进行了评估和测序方案建议。评估发现测序深度15～20 X为最佳方案。</p>
+<h4 id="admixturegraph-an-R-package-for-admixture-graph-manipulation-and-fitting-gt-gt-gt"><a href="#admixturegraph-an-R-package-for-admixture-graph-manipulation-and-fitting-gt-gt-gt" class="headerlink" title="admixturegraph: an R package for admixture graph manipulation and fitting &gt;&gt;&gt;"></a>admixturegraph: an R package for admixture graph manipulation and fitting <a href="https://academic.oup.com/bioinformatics/article/33/11/1738/2964728/admixturegraph-an-R-package-for-admixture-graph" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Bioinformatics (2017) 33 (11): 1738-1740.<br>构建和可视化admixture graph，根据遗传数据拟合graph参数，可视化拟合优度，以及不同graph之间的相对优度。</p>
+<h4 id="ModelFinder-fast-model-selection-for-accurate-phylogenetic-estimates-gt-gt-gt"><a href="#ModelFinder-fast-model-selection-for-accurate-phylogenetic-estimates-gt-gt-gt" class="headerlink" title="ModelFinder: fast model selection for accurate phylogenetic estimates &gt;&gt;&gt;"></a>ModelFinder: fast model selection for accurate phylogenetic estimates <a href="http://www.nature.com/nmeth/journal/v14/n6/abs/nmeth.4285.html" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Nature Methods 14, 587–589 (2017)<br>模型选择是模型依赖的系统进化树构建的关键，作者提出了一个快速选择合适模型的方法/工具 ModelFinder。</p>
+<h4 id="Genome-wide-profiling-of-heritable-and-de-novo-STR-variations-gt-gt-gt"><a href="#Genome-wide-profiling-of-heritable-and-de-novo-STR-variations-gt-gt-gt" class="headerlink" title="Genome-wide profiling of heritable and de novo STR variations &gt;&gt;&gt;"></a>Genome-wide profiling of heritable and de novo STR variations <a href="http://www.nature.com/nmeth/journal/v14/n6/abs/nmeth.4267.html" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Nature Methods 14, 590–592 (2017)<br>Short tandem repeats (STRs) 检测工具HipSTR。</p>
+<h4 id="A-genetic-signature-of-the-evolution-of-loss-of-flight-in-the-Galapagos-cormorant-gt-gt-gt"><a href="#A-genetic-signature-of-the-evolution-of-loss-of-flight-in-the-Galapagos-cormorant-gt-gt-gt" class="headerlink" title="A genetic signature of the evolution of loss of flight in the Galapagos cormorant &gt;&gt;&gt;"></a>A genetic signature of the evolution of loss of flight in the Galapagos cormorant <a href="http://science.sciencemag.org/content/356/6341/eaal3345" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Science  02 Jun 2017: Vol. 356, Issue 6341, eaal3345<br>通过对加拉帕戈斯群岛鸬鹚，一种不会飞的鸬鹚，及其几个近缘会飞的鸬鹚的全基因组从头测序，解释了加拉帕戈斯群岛鸬鹚丧失飞行能力的遗传机制。  </p>
+<h4 id="How-to-measure-natural-selection-gt-gt-gt"><a href="#How-to-measure-natural-selection-gt-gt-gt" class="headerlink" title="How to measure natural selection &gt;&gt;&gt;"></a>How to measure natural selection <a href="http://onlinelibrary.wiley.com/doi/10.1111/2041-210X.12816/full" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p> Methods in Ecology and Evolution, Volume 8, Issue 6 June 2017 Pages 660–662<br>本期主要内容为自然选择分析，本文对本期杂志7篇关于选择分析的文章进行了概述。</p>
+<h4 id="Fine-mapping-inflammatory-bowel-disease-loci-to-single-variant-resolution-gt-gt-gt"><a href="#Fine-mapping-inflammatory-bowel-disease-loci-to-single-variant-resolution-gt-gt-gt" class="headerlink" title="Fine-mapping inflammatory bowel disease loci to single-variant resolution &gt;&gt;&gt;"></a>Fine-mapping inflammatory bowel disease loci to single-variant resolution <a href="http://www.nature.com/nature/journal/vaop/ncurrent/full/nature22969.html" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Nature (2017)<br>肠道炎的GWAS分析。之前的研究虽然找到了200个关联的位点，但是很少有找到确定的功能变异。本研究找到了18个关联位点，有95%的置信度为causal变异。另外27个置信度超过50%。</p>
+<h4 id="Improved-maize-reference-genome-with-single-molecule-technologies-gt-gt-gt"><a href="#Improved-maize-reference-genome-with-single-molecule-technologies-gt-gt-gt" class="headerlink" title="Improved maize reference genome with single-molecule technologies &gt;&gt;&gt;"></a>Improved maize reference genome with single-molecule technologies <a href="http://www.nature.com/nature/journal/v546/n7659/full/nature22971.html#author-information" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Nature 546, 524–527 (22 June 2017)<br>利用单分子实时测序和高分辨率光学图谱技术重新组装了玉米基因组，contig长度提升了52倍，基因间区和着丝粒区域组装得到了明显改善，鉴定了130,000个完整转座子。通过单分子实时测序技术获得了111,000个全长转录本，更新了基因注释。</p>
+<h4 id="Gene-flow-ancient-polymorphism-and-ecological-adaptation-shape-the-genomic-landscape-of-divergence-among-Darwin’s-finches-gt-gt-gt"><a href="#Gene-flow-ancient-polymorphism-and-ecological-adaptation-shape-the-genomic-landscape-of-divergence-among-Darwin’s-finches-gt-gt-gt" class="headerlink" title="Gene flow, ancient polymorphism, and ecological adaptation shape the genomic landscape of divergence among Darwin’s finches &gt;&gt;&gt;"></a>Gene flow, ancient polymorphism, and ecological adaptation shape the genomic landscape of divergence among Darwin’s finches <a href="http://genome.cshlp.org/content/27/6/1004.abstract" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Genome Res. 2017. 27: 1004-1015<br>作者研究了12种达尔文雀，通过扫描全基因组中两两遗传差异大的区域（FST,dXY），发现同域和异域的种之间这种区域的数量相当，说明基因流不是它们形成的主要因素。在这些区域发现了和鸟喙发育相关的基因，说明这些区域涉及生态适应。作者还发现有些区域的形成于达尔文雀扩散的早期。</p>
+<h4 id="Asian-wild-rice-is-a-hybrid-swarm-with-extensive-gene-flow-and-feralization-from-domesticated-rice-gt-gt-gt"><a href="#Asian-wild-rice-is-a-hybrid-swarm-with-extensive-gene-flow-and-feralization-from-domesticated-rice-gt-gt-gt" class="headerlink" title="Asian wild rice is a hybrid swarm with extensive gene flow and feralization from domesticated rice &gt;&gt;&gt;"></a>Asian wild rice is a hybrid swarm with extensive gene flow and feralization from domesticated rice <a href="http://genome.cshlp.org/content/27/6/1029.full#aff-2" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Genome Res. 2017. 27: 1029-1038<br>作者对203个栽培稻和435个野生稻就行了研究，发现现在的野生稻大多与栽培稻存在大量通过花粉或种子介导的基因流。研究还发现aus, indica和 japonica与同域的野生稻存在不同的基因流地理模式。与japonica相比，野生稻与aus, indica的基因流发生在更近期，可能与japonica很早以前就广泛分布有关。</p>
+<h4 id="Increasing-mapping-precision-of-genome-wide-association-studies-to-genotype-and-impute-sequence-or-both-gt-gt-gt"><a href="#Increasing-mapping-precision-of-genome-wide-association-studies-to-genotype-and-impute-sequence-or-both-gt-gt-gt" class="headerlink" title="Increasing mapping precision of genome-wide association studies: to genotype and impute, sequence, or both? &gt;&gt;&gt;"></a>Increasing mapping precision of genome-wide association studies: to genotype and impute, sequence, or both? <a href="http://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1255-6" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Genome Biology201718:118<br>作者对GWAS精细定位进行了综述，主要关注全基因组测序和芯片分型加推断的优劣势。</p>
+<h4 id="Differentiated-demographic-histories-and-local-adaptations-between-Sherpas-and-Tibetans-gt-gt-gt"><a href="#Differentiated-demographic-histories-and-local-adaptations-between-Sherpas-and-Tibetans-gt-gt-gt" class="headerlink" title="Differentiated demographic histories and local adaptations between Sherpas and Tibetans &gt;&gt;&gt;"></a>Differentiated demographic histories and local adaptations between Sherpas and Tibetans <a href="http://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1242-y" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Genome Biology201718:115<br>研究发现夏尔巴人和藏族人都是混合群体，但是不支持藏族人起源于夏尔巴人和汉人的猜想。与藏人相比，夏尔巴人有更高的南亚血统，藏人有更高的东亚和中亚／西伯利亚血统。作者还提出了新的模型来阐述藏人和夏尔巴人不同的群体历史和地区适应性。</p>
+<h4 id="“Like-sugar-in-milk”-reconstructing-the-genetic-history-of-the-Parsi-population-gt-gt-gt"><a href="#“Like-sugar-in-milk”-reconstructing-the-genetic-history-of-the-Parsi-population-gt-gt-gt" class="headerlink" title="“Like sugar in milk”: reconstructing the genetic history of the Parsi population &gt;&gt;&gt;"></a>“Like sugar in milk”: reconstructing the genetic history of the Parsi population <a href="http://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1244-9" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Genome Biology 2017 18:110<br>研究发现在现代人群种，与其南亚邻居相比，帕西人在遗传上与伊朗和高加索人更近，帕西人与现代伊朗人共享更多的单倍型，帕西人大概1,200年前与印度人分歧。帕西人较高的纯合度反映了其近期的隔离和近交。古样本中观测到了48%南亚特有的线粒体型，可能是帕西人早起定居与当地的女性结合有关。作者还发现，与现代伊朗人相比，帕西人与古伊朗人更近，因为现代伊朗人近期混合了近东的遗传成分。</p>
+<h4 id="The-Evolutionary-Interplay-between-Adaptation-and-Self-Fertilization-gt-gt-gt-30055-0"><a href="#The-Evolutionary-Interplay-between-Adaptation-and-Self-Fertilization-gt-gt-gt-30055-0" class="headerlink" title="The Evolutionary Interplay between Adaptation and Self-Fertilization &gt;&gt;&gt;30055-0)"></a>The Evolutionary Interplay between Adaptation and Self-Fertilization <a href="http://www.cell.com/trends/genetics/abstract/S0168-9525(17" target="_blank" rel="external">&gt;&gt;&gt;</a>30055-0)</h4><p>Trends in Genetics, Volume 33, Issue 6, p420–431, June 2017<br>作者对自交对适应性的影响进行了综述。</p>
+<h4 id="Wild-tobacco-genomes-reveal-the-evolution-of-nicotine-biosynthesis-gt-gt-gt"><a href="#Wild-tobacco-genomes-reveal-the-evolution-of-nicotine-biosynthesis-gt-gt-gt" class="headerlink" title="Wild tobacco genomes reveal the evolution of nicotine biosynthesis &gt;&gt;&gt;"></a>Wild tobacco genomes reveal the evolution of nicotine biosynthesis <a href="http://www.pnas.org/content/114/23/6133.full" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>PNAS, June 6, 2017<br>vol. 114 no. 23<br>两种野生烟草基因组从头测序揭示了尼古丁生物合成的进化。</p>
+<h4 id="PosiGene-automated-and-easy-to-use-pipeline-for-genome-wide-detection-of-positively-selected-genes-gt-gt-gt"><a href="#PosiGene-automated-and-easy-to-use-pipeline-for-genome-wide-detection-of-positively-selected-genes-gt-gt-gt" class="headerlink" title="PosiGene: automated and easy-to-use pipeline for genome-wide detection of positively selected genes &gt;&gt;&gt;"></a>PosiGene: automated and easy-to-use pipeline for genome-wide detection of positively selected genes <a href="https://academic.oup.com/nar/article/45/11/e100/3071713/PosiGene-automated-and-easy-to-use-pipeline-for" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Nucleic Acids Res (2017) 45 (11): e100.<br>比较基因组学中，不同种同源基因正选择检测。</p>
+<h4 id="The-Nephila-clavipes-genome-highlights-the-diversity-of-spider-silk-genes-and-their-complex-expression-gt-gt-gt"><a href="#The-Nephila-clavipes-genome-highlights-the-diversity-of-spider-silk-genes-and-their-complex-expression-gt-gt-gt" class="headerlink" title="The Nephila clavipes genome highlights the diversity of spider silk genes and their complex expression &gt;&gt;&gt;"></a>The Nephila clavipes genome highlights the diversity of spider silk genes and their complex expression <a href="http://www.nature.com/ng/journal/v49/n6/abs/ng.3852.html" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Nature Genetics 49, 895–903 (2017)<br>大木林蛛基因组从头测序，揭示蛛丝基因的多样性和表达的复杂性。</p>
+<h4 id="Cassava-haplotype-map-highlights-fixation-of-deleterious-mutations-during-clonal-propagation-gt-gt-gt"><a href="#Cassava-haplotype-map-highlights-fixation-of-deleterious-mutations-during-clonal-propagation-gt-gt-gt" class="headerlink" title="Cassava haplotype map highlights fixation of deleterious mutations during clonal propagation &gt;&gt;&gt;"></a>Cassava haplotype map highlights fixation of deleterious mutations during clonal propagation <a href="http://www.nature.com/ng/journal/v49/n6/abs/ng.3845.html" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Nature Genetics 49, 959–963 (2017)<br>作者通过对241个Cassava高深度测序来研究其有害突变的积累。研究发现，虽然驯化改变了淀粉和酮类代谢途径以适应人的消化，但是伴随的瓶颈效应和无性繁殖增加了有害突变的积累；因为Cassava基因组缺少重组，所以有害突变不能有效清除；虽然近期育种消除了杂合位点最有害的隐形突变以维持产量，但是并不能消除突变负载。  </p>
+<h4 id="Contrasting-evolutionary-genome-dynamics-between-domesticated-and-wild-yeasts-gt-gt-gt"><a href="#Contrasting-evolutionary-genome-dynamics-between-domesticated-and-wild-yeasts-gt-gt-gt" class="headerlink" title="Contrasting evolutionary genome dynamics between domesticated and wild yeasts &gt;&gt;&gt;"></a>Contrasting evolutionary genome dynamics between domesticated and wild yeasts <a href="http://www.nature.com/ng/journal/v49/n6/abs/ng.3847.html" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Nature Genetics 49, 913–924 (2017)<br>通过长读长测序12株酿酒酵母主要类型和其野生近缘种奇异酵母，研究酵母基因组机构变异的规律。</p>
+<h4 id="Genome-sequencing-and-population-genomic-analyses-provide-insights-into-the-adaptive-landscape-of-silver-birch-gt-gt-gt"><a href="#Genome-sequencing-and-population-genomic-analyses-provide-insights-into-the-adaptive-landscape-of-silver-birch-gt-gt-gt" class="headerlink" title="Genome sequencing and population genomic analyses provide insights into the adaptive landscape of silver birch &gt;&gt;&gt;"></a>Genome sequencing and population genomic analyses provide insights into the adaptive landscape of silver birch <a href="http://www.nature.com/ng/journal/v49/n6/abs/ng.3862.html" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Nature Genetics 49, 904–912 (2017)<br>银桦树基因组从头测序，并对80个银桦树进行了重测序，揭示了其群体历史和环境适应性。  </p>
+<h4 id="Phylogenetic-rooting-using-minimal-ancestor-deviation-gt-gt-gt"><a href="#Phylogenetic-rooting-using-minimal-ancestor-deviation-gt-gt-gt" class="headerlink" title="Phylogenetic rooting using minimal ancestor deviation &gt;&gt;&gt;"></a>Phylogenetic rooting using minimal ancestor deviation <a href="http://www.nature.com/articles/s41559-017-0193" target="_blank" rel="external">&gt;&gt;&gt;</a></h4><p>Nature Ecology &amp; Evolution 1, 0193 (2017)<br>利用一种叫minimal ancestor deviation (MAD) 的方法给无根树定根。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="http://onzjn6hm6.bkt.clouddn.com/weixin.jpg" alt="Coly Fu WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="http://onzjn6hm6.bkt.clouddn.com/alipay.jpg" alt="Coly Fu Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/文献导读/" rel="tag"># 文献导读</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/genomics/liftover-chain.html" rel="prev" title="LiftOver chain 文件创建流程">
+                LiftOver chain 文件创建流程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8yODA3OC80NjUx"></div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://onzjn6hm6.bkt.clouddn.com/avatar.jpg"
+               alt="Coly Fu" />
+          <p class="site-author-name" itemprop="name">Coly Fu</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">33</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#A-Critical-Review-on-the-Use-of-Support-Values-in-Tree-Viewers-and-Bioinformatics-Toolkits-gt-gt-gt"><span class="nav-number">1.</span> <span class="nav-text">A Critical Review on the Use of Support Values in Tree Viewers and Bioinformatics Toolkits >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#New-Statistical-Criteria-Detect-Phylogenetic-Bias-Caused-by-Compositional-Heterogeneity-gt-gt-gt"><span class="nav-number">2.</span> <span class="nav-text">New Statistical Criteria Detect Phylogenetic Bias Caused by Compositional Heterogeneity >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Genetic-Diversity-and-the-Efficacy-of-Purifying-Selection-across-Plant-and-Animal-Species-gt-gt-gt"><span class="nav-number">3.</span> <span class="nav-text">Genetic Diversity and the Efficacy of Purifying Selection across Plant and Animal Species >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Contrasting-Rates-of-Molecular-Evolution-and-Patterns-of-Selection-among-Gymnosperms-and-Flowering-Plants-gt-gt-gt"><span class="nav-number">4.</span> <span class="nav-text">Contrasting Rates of Molecular Evolution and Patterns of Selection among Gymnosperms and Flowering Plants >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Mitochondrial-Mutation-Rate-Spectrum-and-Heteroplasmy-in-Caenorhabditis-elegans-Spontaneous-Mutation-Accumulation-Lines-of-Differing-Population-Size-gt-gt-gt"><span class="nav-number">5.</span> <span class="nav-text">Mitochondrial Mutation Rate, Spectrum and Heteroplasmy in Caenorhabditis elegans Spontaneous Mutation Accumulation Lines of Differing Population Size >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Optimal-sequencing-strategies-for-identifying-disease-associated-singletons-gt-gt-gt"><span class="nav-number">6.</span> <span class="nav-text">Optimal sequencing strategies for identifying disease-associated singletons >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#admixturegraph-an-R-package-for-admixture-graph-manipulation-and-fitting-gt-gt-gt"><span class="nav-number">7.</span> <span class="nav-text">admixturegraph: an R package for admixture graph manipulation and fitting >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ModelFinder-fast-model-selection-for-accurate-phylogenetic-estimates-gt-gt-gt"><span class="nav-number">8.</span> <span class="nav-text">ModelFinder: fast model selection for accurate phylogenetic estimates >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Genome-wide-profiling-of-heritable-and-de-novo-STR-variations-gt-gt-gt"><span class="nav-number">9.</span> <span class="nav-text">Genome-wide profiling of heritable and de novo STR variations >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#A-genetic-signature-of-the-evolution-of-loss-of-flight-in-the-Galapagos-cormorant-gt-gt-gt"><span class="nav-number">10.</span> <span class="nav-text">A genetic signature of the evolution of loss of flight in the Galapagos cormorant >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#How-to-measure-natural-selection-gt-gt-gt"><span class="nav-number">11.</span> <span class="nav-text">How to measure natural selection >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Fine-mapping-inflammatory-bowel-disease-loci-to-single-variant-resolution-gt-gt-gt"><span class="nav-number">12.</span> <span class="nav-text">Fine-mapping inflammatory bowel disease loci to single-variant resolution >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Improved-maize-reference-genome-with-single-molecule-technologies-gt-gt-gt"><span class="nav-number">13.</span> <span class="nav-text">Improved maize reference genome with single-molecule technologies >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Gene-flow-ancient-polymorphism-and-ecological-adaptation-shape-the-genomic-landscape-of-divergence-among-Darwin’s-finches-gt-gt-gt"><span class="nav-number">14.</span> <span class="nav-text">Gene flow, ancient polymorphism, and ecological adaptation shape the genomic landscape of divergence among Darwin’s finches >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Asian-wild-rice-is-a-hybrid-swarm-with-extensive-gene-flow-and-feralization-from-domesticated-rice-gt-gt-gt"><span class="nav-number">15.</span> <span class="nav-text">Asian wild rice is a hybrid swarm with extensive gene flow and feralization from domesticated rice >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Increasing-mapping-precision-of-genome-wide-association-studies-to-genotype-and-impute-sequence-or-both-gt-gt-gt"><span class="nav-number">16.</span> <span class="nav-text">Increasing mapping precision of genome-wide association studies: to genotype and impute, sequence, or both? >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Differentiated-demographic-histories-and-local-adaptations-between-Sherpas-and-Tibetans-gt-gt-gt"><span class="nav-number">17.</span> <span class="nav-text">Differentiated demographic histories and local adaptations between Sherpas and Tibetans >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#“Like-sugar-in-milk”-reconstructing-the-genetic-history-of-the-Parsi-population-gt-gt-gt"><span class="nav-number">18.</span> <span class="nav-text">“Like sugar in milk”: reconstructing the genetic history of the Parsi population >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Evolutionary-Interplay-between-Adaptation-and-Self-Fertilization-gt-gt-gt-30055-0"><span class="nav-number">19.</span> <span class="nav-text">The Evolutionary Interplay between Adaptation and Self-Fertilization >>>30055-0)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Wild-tobacco-genomes-reveal-the-evolution-of-nicotine-biosynthesis-gt-gt-gt"><span class="nav-number">20.</span> <span class="nav-text">Wild tobacco genomes reveal the evolution of nicotine biosynthesis >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#PosiGene-automated-and-easy-to-use-pipeline-for-genome-wide-detection-of-positively-selected-genes-gt-gt-gt"><span class="nav-number">21.</span> <span class="nav-text">PosiGene: automated and easy-to-use pipeline for genome-wide detection of positively selected genes >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Nephila-clavipes-genome-highlights-the-diversity-of-spider-silk-genes-and-their-complex-expression-gt-gt-gt"><span class="nav-number">22.</span> <span class="nav-text">The Nephila clavipes genome highlights the diversity of spider silk genes and their complex expression >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Cassava-haplotype-map-highlights-fixation-of-deleterious-mutations-during-clonal-propagation-gt-gt-gt"><span class="nav-number">23.</span> <span class="nav-text">Cassava haplotype map highlights fixation of deleterious mutations during clonal propagation >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Contrasting-evolutionary-genome-dynamics-between-domesticated-and-wild-yeasts-gt-gt-gt"><span class="nav-number">24.</span> <span class="nav-text">Contrasting evolutionary genome dynamics between domesticated and wild yeasts >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Genome-sequencing-and-population-genomic-analyses-provide-insights-into-the-adaptive-landscape-of-silver-birch-gt-gt-gt"><span class="nav-number">25.</span> <span class="nav-text">Genome sequencing and population genomic analyses provide insights into the adaptive landscape of silver birch >>></span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Phylogenetic-rooting-using-minimal-ancestor-deviation-gt-gt-gt"><span class="nav-number">26.</span> <span class="nav-text">Phylogenetic rooting using minimal ancestor deviation >>></span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2016 - 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Coly Fu</span>
+</div>
+
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length == 0) {
+      search_path = "search.xml";
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.popup').toggle();
+    }
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+      $.ajax({
+        url: path,
+        dataType: "xml",
+        async: true,
+        success: function( xmlResponse ) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = $( "entry", xmlResponse ).map(function() {
+            return {
+              title: $( "title", this ).text(),
+              content: $("content",this).text(),
+              url: $( "url" , this).text()
+            };
+          }).get();
+          var $input = document.getElementById(search_id);
+          var $resultContent = document.getElementById(content_id);
+          $input.addEventListener('input', function(){
+            var matchcounts = 0;
+            var str='<ul class=\"search-result-list\">';
+            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+            $resultContent.innerHTML = "";
+            if (this.value.trim().length > 1) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var content_index = [];
+                var data_title = data.title.trim().toLowerCase();
+                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
+                var data_url = decodeURIComponent(data.url);
+                var index_title = -1;
+                var index_content = -1;
+                var first_occur = -1;
+                // only match artiles with not empty titles and contents
+                if(data_title != '') {
+                  keywords.forEach(function(keyword, i) {
+                    index_title = data_title.indexOf(keyword);
+                    index_content = data_content.indexOf(keyword);
+                    if( index_title >= 0 || index_content >= 0 ){
+                      isMatch = true;
+                      if (i == 0) {
+                        first_occur = index_content;
+                      }
+                    }
+
+                  });
+                }
+                // show search results
+                if (isMatch) {
+                  matchcounts += 1;
+                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
+                  var content = data.content.trim().replace(/<[^>]+>/g,"");
+                  if (first_occur >= 0) {
+                    // cut out 100 characters
+                    var start = first_occur - 20;
+                    var end = first_occur + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if(start == 0){
+                      end = 50;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    var match_content = content.substring(start, end);
+                    // highlight all keywords
+                    keywords.forEach(function(keyword){
+                      var regS = new RegExp(keyword, "gi");
+                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
+                    });
+
+                    str += "<p class=\"search-result\">" + match_content +"...</p>"
+                  }
+                  str += "</li>";
+                }
+              })};
+            str += "</ul>";
+            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
+            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
+            $resultContent.innerHTML = str;
+          });
+          proceedsearch();
+        }
+      });}
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched == false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(function(e){
+      $('.popup').hide();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    });
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("TYEr3gWwGEom2g4BHIufivSY-gzGzoHsz", "76KRaa6vXccIYhlGecUXpv6W");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+</body>
+</html>
