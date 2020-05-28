@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.colyfu.com/Population-Genetics/pca-interpret.html</loc>
+    
+    <lastmod>2020-05-28T07:42:05.681Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.colyfu.com/Population-Genetics/ms-simulation.html</loc>
+    
+    <lastmod>2020-05-28T07:41:29.585Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.colyfu.com/Population-Genetics/haplotype-network.html</loc>
+    
+    <lastmod>2020-05-28T07:37:32.275Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.colyfu.com/GWAS/GWAS-candidate.html</loc>
+    
+    <lastmod>2020-05-28T07:36:58.879Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.colyfu.com/paper-express/paper-express-201801.html</loc>
     
     <lastmod>2018-03-13T09:07:20.000Z</lastmod>
@@ -72,13 +100,6 @@
   </url>
   
   <url>
-    <loc>https://www.colyfu.com/GWAS/GWAS-candidate.html</loc>
-    
-    <lastmod>2017-05-27T12:17:39.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.colyfu.com/paper-express/paper-express-201704.html</loc>
     
     <lastmod>2017-05-27T11:53:55.000Z</lastmod>
@@ -86,30 +107,9 @@
   </url>
   
   <url>
-    <loc>https://www.colyfu.com/Population-Genetics/haplotype-network.html</loc>
-    
-    <lastmod>2017-05-27T11:53:17.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.colyfu.com/programming/blockread-python.html</loc>
     
     <lastmod>2017-05-27T11:48:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.colyfu.com/Population-Genetics/ms-simulation.html</loc>
-    
-    <lastmod>2017-05-27T07:33:38.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.colyfu.com/Population-Genetics/pca-interpret.html</loc>
-    
-    <lastmod>2017-05-15T14:52:26.000Z</lastmod>
     
   </url>
   

@@ -96,15 +96,15 @@
 <meta property="og:url" content="https://www.colyfu.com/Population-Genetics/pca-interpret.html">
 <meta property="og:site_name" content="Things worth spreading!">
 <meta property="og:description" content="主成分分析是群体遗传学中常用的分析手段，一般用来 1)分析群体中存在的群体结构(分层)； 2) 推断群体历史； 3) 关联分析中对群体结构进行校正。目前用于主成分分析的数据主要为高密度的SNP标记，其主要思想是将多个线性相关的变量(SNP)，通过一系列矩阵转换，变成少数几个变异解释度大的线性无关变量(特征向量)。">
-<meta property="og:image" content="http://onzjn6hm6.bkt.clouddn.com/pca.png">
-<meta property="og:image" content="http://onzjn6hm6.bkt.clouddn.com/pca_sim.png">
-<meta property="og:image" content="http://onzjn6hm6.bkt.clouddn.com/pca_zhang.png">
-<meta property="og:image" content="http://onzjn6hm6.bkt.clouddn.com/pca_sahara.png">
-<meta property="og:updated_time" content="2017-05-15T14:52:26.000Z">
+<meta property="og:image" content="https://colyfu-com.oss-cn-hangzhou.aliyuncs.com/pca.png">
+<meta property="og:image" content="https://colyfu-com.oss-cn-hangzhou.aliyuncs.com/pca_sim.png">
+<meta property="og:image" content="https://colyfu-com.oss-cn-hangzhou.aliyuncs.com/pca_zhang.png">
+<meta property="og:image" content="https://colyfu-com.oss-cn-hangzhou.aliyuncs.com/pca_sahara.png">
+<meta property="og:updated_time" content="2020-05-28T07:42:05.681Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="主成分分析及其解读">
 <meta name="twitter:description" content="主成分分析是群体遗传学中常用的分析手段，一般用来 1)分析群体中存在的群体结构(分层)； 2) 推断群体历史； 3) 关联分析中对群体结构进行校正。目前用于主成分分析的数据主要为高密度的SNP标记，其主要思想是将多个线性相关的变量(SNP)，通过一系列矩阵转换，变成少数几个变异解释度大的线性无关变量(特征向量)。">
-<meta name="twitter:image" content="http://onzjn6hm6.bkt.clouddn.com/pca.png">
+<meta name="twitter:image" content="https://colyfu-com.oss-cn-hangzhou.aliyuncs.com/pca.png">
 
 
 
@@ -427,7 +427,7 @@
 
       
         <p>主成分分析是群体遗传学中常用的分析手段，一般用来 1)分析群体中存在的群体结构(分层)； 2) 推断群体历史； 3) 关联分析中对群体结构进行校正。目前用于主成分分析的数据主要为高密度的SNP标记，其主要思想是将多个线性相关的变量(SNP)，通过一系列矩阵转换，变成少数几个变异解释度大的线性无关变量(特征向量)。  </p>
-<p align="center"><br>  <img src="http://onzjn6hm6.bkt.clouddn.com/pca.png" width="400"><br></p>
+<p align="center"><br>  <img src="https://colyfu-com.oss-cn-hangzhou.aliyuncs.com/pca.png" width="400"><br></p>
 
 <a id="more"></a>
 <ul>
@@ -451,17 +451,17 @@
 <li>admixture事件  </li>
 </ol>
 <p>如下图，如果A群体和B群体混合生成了C群体，那么PCA分析结果中，C群体会在AB的连线上，谁的比例多，离谁更近。但是如果该混合事件发生在很久以前，由于混合群体经历了自己特有的遗传漂变，会逐渐偏离该连线。 </p>
-<p align="center"><br><img src="http://onzjn6hm6.bkt.clouddn.com/pca_sim.png" width="400"><br></p>
+<p align="center"><br><img src="https://colyfu-com.oss-cn-hangzhou.aliyuncs.com/pca_sim.png" width="400"><br></p>
 
 <p>混合事件不会改变变量空间，即上面的ABCD群体和ABD群体进行PCA分析，所得到的显著主成分一样多。</p>
 <ol>
 <li>migration事件</li>
 </ol>
 <p>如果PCA呈线性分布，与群体的地理分布距离一致，那很有可能说明了该物种的迁徙历史。如下图，左下方彩色的点表示的是狗，该分布就呈线性，与狗从亚洲东南部，经过中亚向欧洲扩散的历史相吻合。</p>
-<p align="center"><br><img src="http://onzjn6hm6.bkt.clouddn.com/pca_zhang.png" width="500"><br></p>
+<p align="center"><br><img src="https://colyfu-com.oss-cn-hangzhou.aliyuncs.com/pca_zhang.png" width="500"><br></p>
 
 <p>下图用撒哈拉以南的非洲人群体作为变量空间进行PCA分析，将其它人群体映射到该变量空间，发现所有其它非撒哈拉以南非洲人群体都聚在一起，暗示了人类从南非的一次迁出。  </p>
-<p align="center"><br><img src="http://onzjn6hm6.bkt.clouddn.com/pca_sahara.png" width="400"><br></p>
+<p align="center"><br><img src="https://colyfu-com.oss-cn-hangzhou.aliyuncs.com/pca_sahara.png" width="400"><br></p>
 
 <p>需要注意的是，PCA呈线性分布并非一定是migration造成的，isolation by distance也会形成该结构。所以要结合其它分析进行判断。</p>
 <p>长的LD片段会影响PCA分析，因此高密度的SNP数据，需要进行LD过滤（LD-based SNP Prunning）。</p>
@@ -721,7 +721,7 @@
         <div class="copyright" >
   
   &copy;  2016 - 
-  <span itemprop="copyrightYear">2019</span>
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

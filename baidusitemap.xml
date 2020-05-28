@@ -4,6 +4,114 @@
 
     
   <url>
+    <loc>https://www.colyfu.com/Population-Genetics/pca-interpret.html</loc>
+    <lastmod>2020-05-28T07:42:05.681Z</lastmod>
+    <data>
+        <display>
+        <title>主成分分析及其解读</title>
+        <pubTime>2017-05-15T14:32:26.000Z</pubTime>
+        
+        <tag>主成分分析</tag>
+         
+        <tag>映射</tag>
+         
+        <tag>群体结构</tag>
+         
+        <tag>迁徙</tag>
+         
+        <tag>基因流</tag>
+         
+        <tag>smartpca</tag>
+         
+         
+           
+             
+              <breadCrumb title="Population_Genetics" url="https://www.colyfu.com/categories/Population-Genetics/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.colyfu.com/Population-Genetics/ms-simulation.html</loc>
+    <lastmod>2020-05-28T07:41:29.585Z</lastmod>
+    <data>
+        <display>
+        <title>群体模拟软件ms使用说明</title>
+        <pubTime>2017-05-27T07:21:17.000Z</pubTime>
+        
+        <tag>ms软件</tag>
+         
+        <tag>模拟</tag>
+         
+        <tag>中性进化</tag>
+         
+        <tag>群体遗传学</tag>
+         
+         
+           
+             
+              <breadCrumb title="Population_Genetics" url="https://www.colyfu.com/categories/Population-Genetics/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.colyfu.com/Population-Genetics/haplotype-network.html</loc>
+    <lastmod>2020-05-28T07:37:32.275Z</lastmod>
+    <data>
+        <display>
+        <title>单体型网络（Haplotype Network）构建及展示</title>
+        <pubTime>2017-05-07T16:24:35.000Z</pubTime>
+        
+        <tag>Haplotype Network</tag>
+         
+        <tag>单体型网络</tag>
+         
+        <tag>PopART</tag>
+         
+        <tag>谱系地理</tag>
+         
+         
+           
+             
+              <breadCrumb title="Population_Genetics" url="https://www.colyfu.com/categories/Population-Genetics/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://www.colyfu.com/GWAS/GWAS-candidate.html</loc>
+    <lastmod>2020-05-28T07:36:58.879Z</lastmod>
+    <data>
+        <display>
+        <title>GWAS如何确定候选区间和causal gene</title>
+        <pubTime>2017-04-09T12:33:37.000Z</pubTime>
+        
+        <tag>GWAS</tag>
+         
+        <tag>causal gene</tag>
+         
+        <tag>LD</tag>
+         
+        <tag>heat map</tag>
+         
+         
+           
+             
+              <breadCrumb title="GWAS" url="https://www.colyfu.com/categories/GWAS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://www.colyfu.com/paper-express/paper-express-201801.html</loc>
     <lastmod>2018-03-13T09:07:20.000Z</lastmod>
     <data>
@@ -214,32 +322,6 @@
 
     
   <url>
-    <loc>https://www.colyfu.com/GWAS/GWAS-candidate.html</loc>
-    <lastmod>2017-05-27T12:17:39.000Z</lastmod>
-    <data>
-        <display>
-        <title>GWAS如何确定候选区间和causal gene</title>
-        <pubTime>2017-04-09T12:33:37.000Z</pubTime>
-        
-        <tag>GWAS</tag>
-         
-        <tag>causal gene</tag>
-         
-        <tag>LD</tag>
-         
-        <tag>heat map</tag>
-         
-         
-           
-             
-              <breadCrumb title="GWAS" url="https://www.colyfu.com/categories/GWAS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>https://www.colyfu.com/paper-express/paper-express-201704.html</loc>
     <lastmod>2017-05-27T11:53:55.000Z</lastmod>
     <data>
@@ -253,32 +335,6 @@
            
              
               <breadCrumb title="paper_express" url="https://www.colyfu.com/categories/paper-express/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.colyfu.com/Population-Genetics/haplotype-network.html</loc>
-    <lastmod>2017-05-27T11:53:17.000Z</lastmod>
-    <data>
-        <display>
-        <title>单体型网络（Haplotype Network）构建及展示</title>
-        <pubTime>2017-05-07T16:24:35.000Z</pubTime>
-        
-        <tag>Haplotype Network</tag>
-         
-        <tag>单体型网络</tag>
-         
-        <tag>PopART</tag>
-         
-        <tag>谱系地理</tag>
-         
-         
-           
-             
-              <breadCrumb title="Population_Genetics" url="https://www.colyfu.com/categories/Population-Genetics/"/>
           
         </display>
     </data>
@@ -301,62 +357,6 @@
            
              
               <breadCrumb title="programming" url="https://www.colyfu.com/categories/programming/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.colyfu.com/Population-Genetics/ms-simulation.html</loc>
-    <lastmod>2017-05-27T07:33:38.000Z</lastmod>
-    <data>
-        <display>
-        <title>群体模拟软件ms使用说明</title>
-        <pubTime>2017-05-27T07:21:17.000Z</pubTime>
-        
-        <tag>ms软件</tag>
-         
-        <tag>模拟</tag>
-         
-        <tag>中性进化</tag>
-         
-        <tag>群体遗传学</tag>
-         
-         
-           
-             
-              <breadCrumb title="Population_Genetics" url="https://www.colyfu.com/categories/Population-Genetics/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://www.colyfu.com/Population-Genetics/pca-interpret.html</loc>
-    <lastmod>2017-05-15T14:52:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>主成分分析及其解读</title>
-        <pubTime>2017-05-15T14:32:26.000Z</pubTime>
-        
-        <tag>主成分分析</tag>
-         
-        <tag>映射</tag>
-         
-        <tag>群体结构</tag>
-         
-        <tag>迁徙</tag>
-         
-        <tag>基因流</tag>
-         
-        <tag>smartpca</tag>
-         
-         
-           
-             
-              <breadCrumb title="Population_Genetics" url="https://www.colyfu.com/categories/Population-Genetics/"/>
           
         </display>
     </data>
